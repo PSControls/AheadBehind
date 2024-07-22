@@ -1,1 +1,450 @@
-[]
+[
+    {
+        "id": "ef1306654341cf48",
+        "type": "tab",
+        "label": "Inputs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cde9bf556ca805e7",
+        "type": "tab",
+        "label": "Shift Efficiency FB",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5ee64d5f31741904",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "128.121.5.60",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6034ba1e7c15fb9e",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "128.121.5.60",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "pscdb",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "pscontrols",
+        "userFieldType": "str",
+        "password": "controls",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "2a81fdde9f222f38",
+        "type": "mqtt in",
+        "z": "ef1306654341cf48",
+        "name": "mqtt subscribe",
+        "topic": "process_data",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "5ee64d5f31741904",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "671c17ba0c365c38",
+                "c93056954fe823a5",
+                "2ab37be848604cd0"
+            ]
+        ]
+    },
+    {
+        "id": "671c17ba0c365c38",
+        "type": "function",
+        "z": "ef1306654341cf48",
+        "name": "parse press angle data",
+        "func": "if (msg.payload.data.payload[\"/iolinkmaster/port[1]/iolinkdevice/pdin\"].data){\n\nvar process_data = msg.payload.data.payload[\"/iolinkmaster/port[1]/iolinkdevice/pdin\"].data;\nvar counter = process_data.substring(0, 8); // grabs section of process data that contains encoder counter\nglobal.set('press_angle', 360 * ((parseInt(counter, 16) % 4096) / 4096)); // converts counter value from hex to INT\nmsg.payload = global.get('press_angle');\n\n    node.status({ fill: \"blue\", shape: \"dot\", text: msg.payload.toFixed(2) });\n\nreturn msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "a4d4a07606b95a9c"
+            ]
+        ]
+    },
+    {
+        "id": "d486887b6dd22966",
+        "type": "comment",
+        "z": "ef1306654341cf48",
+        "name": "subscribe to RMU300 data from master block",
+        "info": "",
+        "x": 210,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c93056954fe823a5",
+        "type": "function",
+        "z": "ef1306654341cf48",
+        "name": "parse live spm data",
+        "func": "var process_data = msg.payload.data.payload[\"/iolinkmaster/port[1]/iolinkdevice/pdin\"].data;\nvar live_spm = 0; \n\nprocess_data = process_data.substring(12, 20);\nglobal.set('live_spm', parseInt(process_data, 16) * 0.1) ;\n\nmsg.payload = global.get('live_spm');\n\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload.toFixed(1) });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ab37be848604cd0",
+        "type": "function",
+        "z": "ef1306654341cf48",
+        "name": "parse stroke mode",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4d4a07606b95a9c",
+        "type": "link out",
+        "z": "ef1306654341cf48",
+        "name": "(Inputs) Press angle out",
+        "mode": "link",
+        "links": [
+            "92d8ea3b5543c66e"
+        ],
+        "x": 515,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bd45941e6c944cc7",
+        "type": "inject",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 06 * * 1,2,3,4,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "6c632faccbb0e219"
+            ]
+        ]
+    },
+    {
+        "id": "782f50628b4e88bb",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "determine active shift",
+        "info": "",
+        "x": 140,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "91b7f31d9fbcf493",
+        "type": "inject",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 14 * * 1,2,3,4,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "843965800cb56943"
+            ]
+        ]
+    },
+    {
+        "id": "29aa17f635819cce",
+        "type": "inject",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 22 * * 1,2,3,4,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "81dad3eec18fdae9"
+            ]
+        ]
+    },
+    {
+        "id": "6c632faccbb0e219",
+        "type": "change",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "active_shift",
+                "pt": "flow",
+                "to": "day",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "843965800cb56943",
+        "type": "change",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "active_shift",
+                "pt": "flow",
+                "to": "afternoon",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81dad3eec18fdae9",
+        "type": "change",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "active_shift",
+                "pt": "flow",
+                "to": "midnight",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92d8ea3b5543c66e",
+        "type": "link in",
+        "z": "cde9bf556ca805e7",
+        "name": "(Shift Efficiency FB) Press angle in",
+        "links": [
+            "a4d4a07606b95a9c"
+        ],
+        "x": 45,
+        "y": 300,
+        "wires": [
+            [
+                "4268820a57df8a04"
+            ]
+        ]
+    },
+    {
+        "id": "4268820a57df8a04",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 1",
+        "func": "\nif (msg.payload >= 320 && msg.payload <= 330)\n{\n    if (flow.get('oneshot') == true)\n    {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n    } \n}\nelse flow.set('oneshot', true);\n\nmsg.payload = global.get('stroke_count');\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload });\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('oneshot', false);",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "50c171c7337d6f71"
+            ]
+        ]
+    },
+    {
+        "id": "8a0563cf63dfd1ac",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "increment stroke based on press angle",
+        "info": "",
+        "x": 180,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "50c171c7337d6f71",
+        "type": "rbe",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "96e6c59667913a3c"
+            ]
+        ]
+    },
+    {
+        "id": "96e6c59667913a3c",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "INSERT INTO strokedata (date, asset) \nVALUES (NOW() AT TIME ZONE 'America/New_York', 'P04');\n--SELECT * FROM strokedata;",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 470,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f708bb888c362e55",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "send stroke id and timestamp to local db",
+        "info": "",
+        "x": 560,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "041bcb3e70b86fd8",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "need to check for continuous mode before incrementing",
+        "info": "",
+        "x": 300,
+        "y": 440,
+        "wires": []
+    }
+]
