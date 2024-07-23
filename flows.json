@@ -16,6 +16,50 @@
         "env": []
     },
     {
+        "id": "c6238f4648e04a71",
+        "type": "tab",
+        "label": "Downtime FB",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0f64723347321243",
+        "type": "subflow",
+        "name": "MQTT Subscribe",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#C0DEED",
+        "icon": "node-red/bridge.svg",
+        "status": {
+            "x": 600,
+            "y": 80,
+            "wires": [
+                {
+                    "id": "7020144799e1a469",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
+        "id": "db3a2af027f65c19",
+        "type": "junction",
+        "z": "c6238f4648e04a71",
+        "x": 700,
+        "y": 300,
+        "wires": [
+            [
+                "60f220b7b3049e79",
+                "cccac83b91ccacae"
+            ]
+        ]
+    },
+    {
         "id": "5ee64d5f31741904",
         "type": "mqtt-broker",
         "name": "",
@@ -72,10 +116,87 @@
         "passwordFieldType": "str"
     },
     {
+        "id": "a8728916668fe40f",
+        "type": "http request",
+        "z": "0f64723347321243",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "128.121.14.31",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "7020144799e1a469"
+            ]
+        ]
+    },
+    {
+        "id": "546ed1b50d4e809d",
+        "type": "inject",
+        "z": "0f64723347321243",
+        "name": "Subscribe",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"code\":10,\"cid\":4711,\"adr\":\"/timer[1]/counter/datachanged/subscribe\",\"data\":{\"callback\":\"mqtt://128.121.5.60:1883/process_data\",\"datatosend\":[\"/iolinkmaster/port[1]/iolinkdevice/pdin\"],\"duration\":\"lifetime\"}}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "a8728916668fe40f"
+            ]
+        ]
+    },
+    {
+        "id": "836f1d0d6b18af15",
+        "type": "comment",
+        "z": "0f64723347321243",
+        "name": "Subscribe on start",
+        "info": "",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7020144799e1a469",
+        "type": "function",
+        "z": "0f64723347321243",
+        "name": "set status",
+        "func": "if (msg.statusCode == 200)\n{\n    msg.payload = {\n        fill : \"green\", \n        shape : \"dot\",\n        text : \"Subscribed\"\n    };\n\n}\nelse{\n    msg.payload = {\n        fill: \"red\",\n        shape: \"dot\",\n        text: \"Disconnected\"\n    };\n} \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "2a81fdde9f222f38",
         "type": "mqtt in",
         "z": "ef1306654341cf48",
-        "name": "mqtt subscribe",
+        "name": "process data",
         "topic": "process_data",
         "qos": "0",
         "datatype": "auto-detect",
@@ -84,7 +205,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 120,
+        "x": 110,
         "y": 160,
         "wires": [
             [
@@ -167,10 +288,75 @@
         "name": "(Inputs) Press angle out",
         "mode": "link",
         "links": [
-            "92d8ea3b5543c66e"
+            "92d8ea3b5543c66e",
+            "ca1ac204874f1c83"
         ],
         "x": 515,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e7ce6d7ca0cfc722",
+        "type": "subflow:0f64723347321243",
+        "z": "ef1306654341cf48",
+        "name": "",
+        "x": 120,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a0cf97abb26fd041",
+        "type": "inject",
+        "z": "ef1306654341cf48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 00 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "b84c2a97f017ae71"
+            ]
+        ]
+    },
+    {
+        "id": "b84c2a97f017ae71",
+        "type": "postgresql",
+        "z": "ef1306654341cf48",
+        "name": "",
+        "query": "DELETE FROM pph;\nCOPY pph(asset, job, shifthour, pph) FROM '/home/controls-orin-1/Desktop/pscMasterPPH.csv' DELIMITER ',' CSV HEADER;",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 300,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60f0a68aec7e2236",
+        "type": "comment",
+        "z": "ef1306654341cf48",
+        "name": "refresh pph based on csv file once per day",
+        "info": "",
+        "x": 200,
+        "y": 340,
         "wires": []
     },
     {
@@ -188,7 +374,7 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 06 * * 1,2,3,4,5",
+        "crontab": "45 05 * * 1,2,3,4,5",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
@@ -227,7 +413,7 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 14 * * 1,2,3,4,5",
+        "crontab": "45 01 * * 1,2,3,4,5",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
@@ -256,7 +442,7 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 22 * * 1,2,3,4,5",
+        "crontab": "45 21 * * 1,2,3,4,5",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
@@ -280,8 +466,8 @@
                 "t": "set",
                 "p": "active_shift",
                 "pt": "flow",
-                "to": "day",
-                "tot": "str"
+                "to": "1",
+                "tot": "num"
             }
         ],
         "action": "",
@@ -305,8 +491,8 @@
                 "t": "set",
                 "p": "active_shift",
                 "pt": "flow",
-                "to": "afternoon",
-                "tot": "str"
+                "to": "2",
+                "tot": "num"
             }
         ],
         "action": "",
@@ -330,8 +516,8 @@
                 "t": "set",
                 "p": "active_shift",
                 "pt": "flow",
-                "to": "midnight",
-                "tot": "str"
+                "to": "0",
+                "tot": "num"
             }
         ],
         "action": "",
@@ -366,11 +552,11 @@
         "type": "function",
         "z": "cde9bf556ca805e7",
         "name": "function 1",
-        "func": "\nif (msg.payload >= 320 && msg.payload <= 330)\n{\n    if (flow.get('oneshot') == true)\n    {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n    } \n}\nelse flow.set('oneshot', true);\n\nmsg.payload = global.get('stroke_count');\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload });\n\nreturn msg;",
+        "func": "global.set('press_angle', msg.payload);\n\nif (msg.payload >= 320 && msg.payload <= 330) {\n    if (flow.get('oneshot') == true) {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n    }\n}\nelse flow.set('oneshot', true);\n\nmsg.payload = {\n    stroke: global.get('stroke_count'), \n    angle: global.get('press_angle')\n};\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload.stroke });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('oneshot', false);",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('oneshot', false);\n",
         "finalize": "",
         "libs": [],
         "x": 160,
@@ -392,31 +578,11 @@
         "wires": []
     },
     {
-        "id": "50c171c7337d6f71",
-        "type": "rbe",
-        "z": "cde9bf556ca805e7",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 310,
-        "y": 300,
-        "wires": [
-            [
-                "96e6c59667913a3c"
-            ]
-        ]
-    },
-    {
         "id": "96e6c59667913a3c",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
         "name": "",
-        "query": "INSERT INTO strokedata (date, asset) \nVALUES (NOW() AT TIME ZONE 'America/New_York', 'P04');\n--SELECT * FROM strokedata;",
+        "query": "INSERT INTO strokedata (date, asset, stroke, angle) \nVALUES (NOW() AT TIME ZONE 'America/New_York', 'P04', {{{msg.payload.stroke}}}, {{{msg.payload.angle}}});\n--SELECT * FROM strokedata;",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
@@ -443,8 +609,345 @@
         "z": "cde9bf556ca805e7",
         "name": "need to check for continuous mode before incrementing",
         "info": "",
+        "x": 240,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "50c171c7337d6f71",
+        "type": "rbe",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.stroke",
+        "topi": "topic",
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "96e6c59667913a3c"
+            ]
+        ]
+    },
+    {
+        "id": "01347cb8fa55b429",
+        "type": "inject",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 720,
+        "wires": [
+            [
+                "78b67122e8e9cb2c"
+            ]
+        ]
+    },
+    {
+        "id": "5a3d6797c92c09ad",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "FOR TESTING",
+        "info": "",
+        "x": 130,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "78b67122e8e9cb2c",
+        "type": "change",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "stroke_count",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
         "x": 300,
-        "y": 440,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53d21f41c44a06d0",
+        "type": "postgresql",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "query": "INSERT INTO downtime(startdate, enddate ) \nVALUES('{{{msg.payload.startdate}}}'::timestamptz, '{{{msg.payload.enddate}}}'::timestamptz);",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60f220b7b3049e79",
+        "type": "function",
+        "z": "c6238f4648e04a71",
+        "name": "Downtime logic",
+        "func": "if (context.get('downtime_started') == undefined){\n    context.set('downtime_started', false);\n}\n\n\nif (!msg.payload && !context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    context.set('startdate', str);\n    \n}\n\nif(msg.payload && !context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    return msg;\n    \n}\n\nreturn;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [
+                "53d21f41c44a06d0",
+                "e592e07510bca511"
+            ]
+        ]
+    },
+    {
+        "id": "ca1ac204874f1c83",
+        "type": "link in",
+        "z": "c6238f4648e04a71",
+        "name": "(Downtime FB) Press angle in",
+        "links": [
+            "a4d4a07606b95a9c"
+        ],
+        "x": 85,
+        "y": 240,
+        "wires": [
+            [
+                "73c7f49f4256975f"
+            ]
+        ]
+    },
+    {
+        "id": "242f79df18325244",
+        "type": "controltimer",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "timerType": "delay",
+        "timerDurationUnit": "second",
+        "timerDurationType": "num",
+        "timerDuration": 5,
+        "timerLoopTimeoutUnit": "second",
+        "timerLoopTimeoutType": "num",
+        "timerLoopTimeout": 0,
+        "loopTimeoutMessageType": "str",
+        "loopTimeoutMessage": "LOOP_TIMEOUT",
+        "timerMaxLoopIterationsType": "num",
+        "timerMaxLoopIterations": 0,
+        "loopMaxIterationsMessageType": "str",
+        "loopMaxIterationsMessage": "MAX_LOOP_ITERATIONS",
+        "isRunningTimerProgressVisible": true,
+        "outputReceivedMessageOnTimerTrigger": true,
+        "outputReceivedMessageOnTimerHalt": false,
+        "startTimerOnReceivalOfUnknownMessage": true,
+        "resetTimerOnReceivalOfUnknownMessage": true,
+        "resetTimerOnReceivalOfStartAction": false,
+        "continueTimerOnReceivalOfStartAction": false,
+        "isDebugModeEnabled": false,
+        "timerTriggeredMessageType": "str",
+        "timerTriggeredMessage": "TIMER_TRIGGERED",
+        "timerHaltedMessageType": "str",
+        "timerHaltedMessage": "TIMER_HALTED",
+        "isStartActionEnabled": true,
+        "isStopActionEnabled": true,
+        "isResetActionEnabled": true,
+        "isPauseActionEnabled": true,
+        "isContinueActionEnabled": true,
+        "actionPropertyNameType": "str",
+        "actionPropertyName": "payload",
+        "startActionNameType": "str",
+        "startActionName": "START",
+        "stopActionNameType": "str",
+        "stopActionName": "STOP",
+        "resetActionNameType": "str",
+        "resetActionName": "RESET",
+        "pauseActionNameType": "str",
+        "pauseActionName": "PAUSE",
+        "continueActionNameType": "str",
+        "continueActionName": "CONTINUE",
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "10420daf5dba8294"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "73c7f49f4256975f",
+        "type": "rbe",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "242f79df18325244",
+                "94772a80db4199f1"
+            ]
+        ]
+    },
+    {
+        "id": "94772a80db4199f1",
+        "type": "function",
+        "z": "c6238f4648e04a71",
+        "name": "Check Press State",
+        "func": "if (global.get('continuous_mode'))\n{\n    global.set('P04_run_state', true);\n}else{\n    global.set('P04_run_state', false);\n\n}\nmsg.payload = global.get('P04_run_state');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10420daf5dba8294",
+        "type": "change",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "P04_run_state",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "60f220b7b3049e79",
+                "97dc4911814165ab"
+            ]
+        ]
+    },
+    {
+        "id": "97dc4911814165ab",
+        "type": "debug",
+        "z": "c6238f4648e04a71",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "001b703dc143c464",
+        "type": "inject",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "73c7f49f4256975f"
+            ]
+        ]
+    },
+    {
+        "id": "cccac83b91ccacae",
+        "type": "debug",
+        "z": "c6238f4648e04a71",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e592e07510bca511",
+        "type": "debug",
+        "z": "c6238f4648e04a71",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 140,
         "wires": []
     }
 ]
