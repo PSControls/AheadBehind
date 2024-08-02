@@ -47,15 +47,14 @@
         }
     },
     {
-        "id": "db3a2af027f65c19",
+        "id": "022310190439f221",
         "type": "junction",
         "z": "c6238f4648e04a71",
-        "x": 700,
-        "y": 300,
+        "x": 740,
+        "y": 320,
         "wires": [
             [
-                "60f220b7b3049e79",
-                "cccac83b91ccacae"
+                "f726fb9bd416c0c6"
             ]
         ]
     },
@@ -465,9 +464,9 @@
             {
                 "t": "set",
                 "p": "active_shift",
-                "pt": "flow",
-                "to": "1",
-                "tot": "num"
+                "pt": "global",
+                "to": "D",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -475,7 +474,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
+        "x": 340,
         "y": 100,
         "wires": [
             []
@@ -490,9 +489,9 @@
             {
                 "t": "set",
                 "p": "active_shift",
-                "pt": "flow",
-                "to": "2",
-                "tot": "num"
+                "pt": "global",
+                "to": "A",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -500,7 +499,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
+        "x": 340,
         "y": 140,
         "wires": [
             []
@@ -515,9 +514,9 @@
             {
                 "t": "set",
                 "p": "active_shift",
-                "pt": "flow",
-                "to": "0",
-                "tot": "num"
+                "pt": "global",
+                "to": "N",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -525,7 +524,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
+        "x": 340,
         "y": 180,
         "wires": [
             []
@@ -552,7 +551,7 @@
         "type": "function",
         "z": "cde9bf556ca805e7",
         "name": "function 1",
-        "func": "global.set('press_angle', msg.payload);\n\nif (msg.payload >= 320 && msg.payload <= 330) {\n    if (flow.get('oneshot') == true) {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n    }\n}\nelse flow.set('oneshot', true);\n\nmsg.payload = {\n    stroke: global.get('stroke_count'), \n    angle: global.get('press_angle')\n};\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload.stroke });\n\nreturn msg;",
+        "func": "global.set('press_angle', msg.payload);\n\nif (!(global.get('stroke_count')))\n{\n    global.set('stroke_count', 0);\n};\n\nif (msg.payload >= 320 && msg.payload <= 330) {\n    if (flow.get('oneshot') == true) {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n    }\n}\nelse flow.set('oneshot', true);\n\nmsg.payload = {\n    shifthour: global.get('active_shift_hour'), \n    shift: global.get('active_shift')\n};\nnode.status({ fill: \"blue\", shape: \"dot\", text: global.get('stroke_count')});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -582,7 +581,7 @@
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
         "name": "",
-        "query": "INSERT INTO strokedata (date, asset, stroke, angle) \nVALUES (NOW() AT TIME ZONE 'America/New_York', 'P04', {{{msg.payload.stroke}}}, {{{msg.payload.angle}}});\n--SELECT * FROM strokedata;",
+        "query": "INSERT INTO strokedata (date, asset, shifthour, shift) \nVALUES (NOW() AT TIME ZONE 'America/New_York', 'P04', {{{msg.payload.shifthour}}}, {{{msg.payload.shift}}});",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
@@ -601,16 +600,6 @@
         "info": "",
         "x": 560,
         "y": 260,
-        "wires": []
-    },
-    {
-        "id": "041bcb3e70b86fd8",
-        "type": "comment",
-        "z": "cde9bf556ca805e7",
-        "name": "need to check for continuous mode before incrementing",
-        "info": "",
-        "x": 240,
-        "y": 380,
         "wires": []
     },
     {
@@ -634,7 +623,282 @@
         ]
     },
     {
-        "id": "01347cb8fa55b429",
+        "id": "5f3cfe34af8c0bd6",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "calculate shift KPIs",
+        "info": "",
+        "x": 130,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3e6e190205588258",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "calculate hourly KPIs",
+        "info": "",
+        "x": 140,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1e3cdd0139c3829b",
+        "type": "cronplus",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "0 45 * * * *",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "995a31b07349e407",
+                "dddbe3cbe4f32c78"
+            ]
+        ]
+    },
+    {
+        "id": "908b9abda5cd6779",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "SELECT pph FROM pphdata\nWHERE asset = 'P04' AND \njob = 'MRFS-STAMP6RR2A' AND \nshifthour =  '{{{msg.payload}}}';\nSELECT COUNT(*) from strokedata where date >= now() - interval '1 hours';",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "8374969604ff5022"
+            ]
+        ]
+    },
+    {
+        "id": "995a31b07349e407",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 2",
+        "func": "function map_hours(currentHour) {\n    const mapping = {\n        21:1, 22:2, 23:3, 0:4, 1:5, 2:6, 3:7, 4:8, 5:1, 6:2, 7:3, 8:4, 9:5, 10:6, 11:7, 12:8, 13:1, 14:2, 15:3, 16:4, 17:5, 18:6, 19:7, 20:8 \n    }\n\n    var shift_hour = mapping[currentHour];\n    return shift_hour;\n}\n\nconst now = new Date();\nconst currentHour = now.getHours();\n\nglobal.set('active_shift_hour', map_hours(currentHour));\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dddbe3cbe4f32c78",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 3",
+        "func": "function map_hours(currentHour) {\n    const mapping = {\n        21:8, 22:1, 23:2, 0:3, 1:4, 2:5, 3:6, 4:7, \n        5:8, 6:1, 7:2, 8:3, 9:4, 10:5, 11:6, 12:7, \n        13:8, 14:1, 15:2, 16:3, 17:4, 18:5, 19:6, 20:7 \n    }\n\n    var shift_hour = mapping[currentHour];\n    return shift_hour;\n}\n\nconst now = new Date();\nconst currentHour = now.getHours();\n\nglobal.set('last_shift_hour', map_hours(currentHour));\nmsg.payload = global.get('last_shift_hour');\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "908b9abda5cd6779"
+            ]
+        ]
+    },
+    {
+        "id": "8374969604ff5022",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "Calc hourly eff",
+        "func": "let hourly_eff = Number(msg.payload[1].count)/ msg.payload[0].pph;\n\nlet date = new Date;\nlet hour = date.getHours();\nlet shift = \"\"\nif (hour >5 && hour <= 13)\n{\n shift = \"D\";\n\n}\nelse if (hour >13 && hour <= 21)\n{\n shift = \"A\";\n\n}\nelse{\n    shift = \"N\"\n}\n\nmsg.payload = {\n    eff: hourly_eff,\n    shifthour: global.get('last_shift_hour'),\n    asset : \"P04\",\n    current_shift: shift \n}\n\nreturn msg;\n\n\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 400,
+        "wires": [
+            [
+                "482f6305b3103526"
+            ]
+        ]
+    },
+    {
+        "id": "5c2b3b7508f5a369",
+        "type": "cronplus",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "45 5,13,21 * * * ",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "2fc253b015b8841f"
+            ]
+        ]
+    },
+    {
+        "id": "482f6305b3103526",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "INSERT INTO hourlydata(hour, shifthour, efficiency, asset, shift)\nVALUES(Now(), {{{msg.payload.shifthour}}},{{{msg.payload.eff}}}, '{{{msg.payload.asset}}}', '{{{msg.payload.current_shift}}}')",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 890,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a121562e04632241",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "SELECT COUNT(id) FROM strokedata WHERE date >= NOW() - INTERVAL '8 hour';\nSELECT efficiency from hourlydata \n --WHERE shift = '{{{msg.payload}}}'\nWHERE shift = 'D'\nORDER BY ID DESC LIMIT 8; \nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour';\n\n",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "445908a2db8b4404"
+            ]
+        ]
+    },
+    {
+        "id": "2fc253b015b8841f",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 6",
+        "func": "let date = new Date;\n\nlet hour = date.getHours();\nlet shift = \"\";\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\nmsg.payload = shift;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 580,
+        "wires": [
+            [
+                "a121562e04632241"
+            ]
+        ]
+    },
+    {
+        "id": "445908a2db8b4404",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 7",
+        "func": "let shift_eff = calcEff(msg.payload);\nlet gsph = Number(msg.payload[0].count)/ 7.083;\nlet object_keys = Object.keys(msg.payload[9].sum);\nlet shift = \"\";\nlet date = new Date;\nlet hour = date.getHours();\n\nlet totaldowntime = msg.payload[9].sum\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\n\n\nmsg.payload = {\n\n    day : date.getDate(),\n    shift_gsph: gsph,\n    avg_eff : shift_eff,\n    current_shift: shift,\n    downtime: totaldowntime\n\n}\n\nreturn msg;\n\nnode.warn(totaldowntime);\n\n\n\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[9].sum.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[9].sum.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[9].sum.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n\n\n\n\n\nfunction calcEff(arr){\n\n\nlet len = arr.length - 2;\nlet sum = 0;\n\nfor (let i = 1; i < arr.length-1; i++){\n\n    sum +=msg.payload[i].efficiency\n}\nnode.warn(sum);\nlet eff = sum/len;\n\nreturn eff;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "7269230f2114c527"
+            ]
+        ]
+    },
+    {
+        "id": "94391f1be6dbfe2e",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 8",
+        "func": "",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 740,
+        "wires": [
+            [
+                "88ee03dcd9127c02"
+            ]
+        ]
+    },
+    {
+        "id": "88ee03dcd9127c02",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "{{{msg.payload}}}",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f7d82681a34d30e",
         "type": "inject",
         "z": "cde9bf556ca805e7",
         "name": "",
@@ -654,84 +918,28 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 720,
+        "x": 140,
+        "y": 740,
         "wires": [
             [
-                "78b67122e8e9cb2c"
+                "94391f1be6dbfe2e"
             ]
         ]
     },
     {
-        "id": "5a3d6797c92c09ad",
-        "type": "comment",
-        "z": "cde9bf556ca805e7",
-        "name": "FOR TESTING",
-        "info": "",
-        "x": 130,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "78b67122e8e9cb2c",
-        "type": "change",
-        "z": "cde9bf556ca805e7",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "stroke_count",
-                "pt": "flow",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "53d21f41c44a06d0",
+        "id": "7269230f2114c527",
         "type": "postgresql",
-        "z": "c6238f4648e04a71",
+        "z": "cde9bf556ca805e7",
         "name": "",
-        "query": "INSERT INTO downtime(startdate, enddate ) \nVALUES('{{{msg.payload.startdate}}}'::timestamptz, '{{{msg.payload.enddate}}}'::timestamptz);",
+        "query": "INSERT INTO shiftdata(day, gsph, avg_eff,shift, totaldowntime )\nVALUES('{{{msg.payload.day}}}',{{{payload.shift_gsph}}},{{{msg.payload.avg_eff}}}, {{{msg.payload.downtime}}}  )",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 1050,
-        "y": 240,
+        "x": 890,
+        "y": 580,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "60f220b7b3049e79",
-        "type": "function",
-        "z": "c6238f4648e04a71",
-        "name": "Downtime logic",
-        "func": "if (context.get('downtime_started') == undefined){\n    context.set('downtime_started', false);\n}\n\n\nif (!msg.payload && !context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    context.set('startdate', str);\n    \n}\n\nif(msg.payload && !context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    return msg;\n    \n}\n\nreturn;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 820,
-        "y": 240,
-        "wires": [
-            [
-                "53d21f41c44a06d0",
-                "e592e07510bca511"
-            ]
         ]
     },
     {
@@ -746,12 +954,48 @@
         "y": 240,
         "wires": [
             [
-                "73c7f49f4256975f"
+                "3ae92b49f2a7e593"
             ]
         ]
     },
     {
-        "id": "242f79df18325244",
+        "id": "64ec4cb0f059f48d",
+        "type": "postgresql",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "query": "INSERT INTO downtime(startdate, enddate ) \nVALUES('{{{msg.payload.startdate}}}'::timestamptz, '{{{msg.payload.enddate}}}'::timestamptz);",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1170,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f726fb9bd416c0c6",
+        "type": "function",
+        "z": "c6238f4648e04a71",
+        "name": "Downtime logic",
+        "func": "if (context.get('downtime_started') == undefined){\n    context.set('downtime_started', false);\n}\n\n\nif (!flow.get('p04_production_state') && !context.get('downtime_started')){\n    let date = new Date;\n    date.setSeconds(date.getSeconds() - 30);    \n    let str = date.toISOString();\n    context.set('startdate', str);\n    context.set('downtime_started', true)\n    \n}\n\nif(flow.get('p04_production_state') && context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    context.set('downtime_started', false);\n\n    return msg;\n    \n}\n\n\nif (msg.payload == \"END OF SHIFT\" && context.get('downtime_started')){\n\n    let date = new Date;\n    let str = date.toISOString();\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    context.set('startdate', str);\n\n    return msg;\n\n\n\n}\n\n\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 240,
+        "wires": [
+            [
+                "64ec4cb0f059f48d"
+            ]
+        ]
+    },
+    {
+        "id": "52e8254bf2427aa5",
         "type": "controltimer",
         "z": "c6238f4648e04a71",
         "name": "",
@@ -801,62 +1045,43 @@
         "y": 240,
         "wires": [
             [
-                "10420daf5dba8294"
+                "201ff3d15d08dccc"
             ],
             []
         ]
     },
     {
-        "id": "73c7f49f4256975f",
-        "type": "rbe",
-        "z": "c6238f4648e04a71",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 210,
-        "y": 240,
-        "wires": [
-            [
-                "242f79df18325244",
-                "94772a80db4199f1"
-            ]
-        ]
-    },
-    {
-        "id": "94772a80db4199f1",
+        "id": "ec1e2775b20959bb",
         "type": "function",
         "z": "c6238f4648e04a71",
         "name": "Check Press State",
-        "func": "if (global.get('continuous_mode'))\n{\n    global.set('P04_run_state', true);\n}else{\n    global.set('P04_run_state', false);\n\n}\nmsg.payload = global.get('P04_run_state');\n\nreturn msg;",
+        "func": "// if (flow.get('p04_production_state') == undefined){\n// flow.set('p04_production_state', false)\n// }\n\n\nflow.set('p04_production_state', true);\nmsg.payload = flow.get('p04_production_state');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 390,
+        "x": 350,
         "y": 300,
         "wires": [
-            []
+            [
+                "022310190439f221"
+            ]
         ]
     },
     {
-        "id": "10420daf5dba8294",
+        "id": "201ff3d15d08dccc",
         "type": "change",
         "z": "c6238f4648e04a71",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "P04_run_state",
-                "tot": "global"
+                "p": "p04_production_state",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -864,90 +1089,116 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
+        "x": 630,
         "y": 240,
         "wires": [
             [
-                "60f220b7b3049e79",
-                "97dc4911814165ab"
+                "f726fb9bd416c0c6"
             ]
         ]
     },
     {
-        "id": "97dc4911814165ab",
-        "type": "debug",
-        "z": "c6238f4648e04a71",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "001b703dc143c464",
-        "type": "inject",
+        "id": "87fad215bbb8dc2e",
+        "type": "cronplus",
         "z": "c6238f4648e04a71",
         "name": "",
-        "props": [
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "str",
+                "payload": "END OF SHIFT",
+                "expressionType": "cron",
+                "expression": "45 5,13,21 * * * ",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
             }
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 90,
+        "x": 380,
         "y": 340,
         "wires": [
             [
-                "73c7f49f4256975f"
+                "022310190439f221"
             ]
         ]
     },
     {
-        "id": "cccac83b91ccacae",
-        "type": "debug",
+        "id": "3ae92b49f2a7e593",
+        "type": "function",
         "z": "c6238f4648e04a71",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 320,
-        "wires": []
+        "name": "function 5",
+        "func": "if (context.get('last_angle') == undefined){\n\n    context.set('last_angle', 0);\n\n\n\n}\n\n\nif (msg.payload != context.get('last_angle'))\n{\n    context.set('last_angle', msg.payload);\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "52e8254bf2427aa5"
+            ]
+        ]
     },
     {
-        "id": "e592e07510bca511",
-        "type": "debug",
+        "id": "4e618ae9b1485194",
+        "type": "cronplus",
         "z": "c6238f4648e04a71",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 140,
-        "wires": []
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "0 * * * * * *",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 240,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3bc6ba5cd691287",
+        "type": "function",
+        "z": "c6238f4648e04a71",
+        "name": "function 9",
+        "func": "\nlet totaldowntime =0;\n\nnode.warn(totaldowntime);\n\n\n\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[9].sum.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[9].sum.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[9].sum.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 480,
+        "wires": [
+            []
+        ]
     }
 ]
