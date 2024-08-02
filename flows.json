@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "67e87d017f864a87",
+        "type": "tab",
+        "label": "UI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "0f64723347321243",
         "type": "subflow",
         "name": "MQTT Subscribe",
@@ -47,11 +55,51 @@
         }
     },
     {
+        "id": "8ccc6e9e9f09cd11",
+        "type": "group",
+        "z": "67e87d017f864a87",
+        "name": "Line End Counter",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "d4f9970e9026b2ec",
+            "25fbb845b46918be",
+            "c0b36442ce7578ee",
+            "35465b3555d4ec49",
+            "2bab4b5323409036",
+            "5a559594705a4e9e",
+            "d3db2d9b1d01712b",
+            "fce2355146e94b14",
+            "75011c9dc6f0e056",
+            "6f6bdf98a994696a",
+            "af1cd095c12d8d6a",
+            "9c016da8cec6c459"
+        ],
+        "x": 34,
+        "y": 79,
+        "w": 952,
+        "h": 262
+    },
+    {
         "id": "022310190439f221",
         "type": "junction",
         "z": "c6238f4648e04a71",
-        "x": 740,
-        "y": 320,
+        "x": 940,
+        "y": 300,
+        "wires": [
+            [
+                "f726fb9bd416c0c6"
+            ]
+        ]
+    },
+    {
+        "id": "c20a1b4d9b50dc8d",
+        "type": "junction",
+        "z": "c6238f4648e04a71",
+        "x": 940,
+        "y": 180,
         "wires": [
             [
                 "f726fb9bd416c0c6"
@@ -113,6 +161,392 @@
         "userFieldType": "str",
         "password": "controls",
         "passwordFieldType": "str"
+    },
+    {
+        "id": "167b1c6477533d2f",
+        "type": "ui_tab",
+        "name": "Ahead and Behind",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0de8c6dfc0922f97",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#123261",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#123261",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#123261",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1e53a1",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#123261",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "31922b286864d455",
+        "type": "ui_group",
+        "name": "chart",
+        "tab": "167b1c6477533d2f",
+        "order": 1,
+        "disp": false,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "97ceca48ccb1eb81",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 1,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "25d0c79066caa716",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0fff20d9c709cba5",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bb3cae2f333ed012",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 5,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f261f9acbb90a7fe",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "963cb4176cd4d163",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "d67b4512cc38d7fc",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "dae5b590a181b5c8",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b2cb5811b96e03bd",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "d3a5360ea5e4b0b9",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "029d53dd2a5e22da",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 12,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "898feb1370c8bdef",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1ce214175cbdbbbc",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "22066adf7790ed3f",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 15,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a8a55cae10ce25b7",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 16,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "c1d3d854b65d8f3c",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 17,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1229f659eb83e4c7",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 18,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "81a9db6700962531",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 19,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "2cb52b09c48cb0e7",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 20,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "433bf92c57e59567",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 21,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8eaee53e67f9be9c",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 22,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "24cb52a85db14439",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 23,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b71a1dbb4d9f17d8",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 24,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f6a772e0136b668d",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 25,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "0c2f702e86ec0442",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 26,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "1707d8fc5286c549",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 28,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b4e4266157444835",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "31922b286864d455",
+        "order": 30,
+        "width": 10,
+        "height": 1
     },
     {
         "id": "a8728916668fe40f",
@@ -412,7 +846,7 @@
             }
         ],
         "repeat": "",
-        "crontab": "45 01 * * 1,2,3,4,5",
+        "crontab": "45 13 * * 1,2,3,4,5",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
@@ -808,7 +1242,7 @@
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
         "name": "",
-        "query": "SELECT COUNT(id) FROM strokedata WHERE date >= NOW() - INTERVAL '8 hour';\nSELECT efficiency from hourlydata \n --WHERE shift = '{{{msg.payload}}}'\nWHERE shift = 'D'\nORDER BY ID DESC LIMIT 8; \nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour';\n\n",
+        "query": "SELECT COUNT(id) FROM strokedata WHERE date >= NOW() - INTERVAL '8 hour';\nSELECT efficiency from hourlydata \n --WHERE shift = '{{{msg.payload}}}'\nWHERE shift = 'D'\nORDER BY ID DESC LIMIT 8; \nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute';\n\n",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
@@ -846,7 +1280,7 @@
         "type": "function",
         "z": "cde9bf556ca805e7",
         "name": "function 7",
-        "func": "let shift_eff = calcEff(msg.payload);\nlet gsph = Number(msg.payload[0].count)/ 7.083;\nlet object_keys = Object.keys(msg.payload[9].sum);\nlet shift = \"\";\nlet date = new Date;\nlet hour = date.getHours();\n\nlet totaldowntime = msg.payload[9].sum\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\n\n\nmsg.payload = {\n\n    day : date.getDate(),\n    shift_gsph: gsph,\n    avg_eff : shift_eff,\n    current_shift: shift,\n    downtime: totaldowntime\n\n}\n\nreturn msg;\n\nnode.warn(totaldowntime);\n\n\n\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[9].sum.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[9].sum.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[9].sum.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n\n\n\n\n\nfunction calcEff(arr){\n\n\nlet len = arr.length - 2;\nlet sum = 0;\n\nfor (let i = 1; i < arr.length-1; i++){\n\n    sum +=msg.payload[i].efficiency\n}\nnode.warn(sum);\nlet eff = sum/len;\n\nreturn eff;\n}\nreturn msg;",
+        "func": "let shift_eff = calcEff(msg.payload);\nlet gsph = Number(msg.payload[0].count)/ 7.083;\nlet object_keys = Object.keys(msg.payload[9].sum);\nlet shift = \"\";\nlet date = new Date;\nlet hour = date.getHours();\n\n\nlet totaldowntime = `${msg.payload[9].sum.hours} hours ${msg.payload[9].sum.minutes} minutes ${msg.payload[9].sum.seconds} seconds ${msg.payload[9].sum.milliseconds} milliseconds`;\n\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\n\n\nmsg.payload = {\n\n    day : date.toLocaleDateString(),\n    shift_gsph: gsph,\n    avg_eff : shift_eff,\n    current_shift: shift,\n    downtime: totaldowntime\n\n}\n\nreturn msg;\n\nfunction calcEff(arr){\n\n\nlet len = arr.length - 2;\nlet sum = 0;\n\nfor (let i = 1; i < arr.length-1; i++){\n\n    sum +=msg.payload[i].efficiency\n}\nnode.warn(sum);\nlet eff = sum/len;\n\nreturn eff;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -862,43 +1296,23 @@
         ]
     },
     {
-        "id": "94391f1be6dbfe2e",
-        "type": "function",
-        "z": "cde9bf556ca805e7",
-        "name": "function 8",
-        "func": "",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 740,
-        "wires": [
-            [
-                "88ee03dcd9127c02"
-            ]
-        ]
-    },
-    {
-        "id": "88ee03dcd9127c02",
+        "id": "7269230f2114c527",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
         "name": "",
-        "query": "{{{msg.payload}}}",
+        "query": "INSERT INTO shiftdata(day, gsph, avg_eff, shift, totaldowntime)\nVALUES('{{{msg.payload.day}}}', {{{msg.payload.shift_gsph}}}, {{{msg.payload.avg_eff}}}, '{{{msg.payload.current_shift}}}', INTERVAL '{{{msg.payload.downtime}}}');\n",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 530,
-        "y": 740,
+        "x": 890,
+        "y": 580,
         "wires": [
             []
         ]
     },
     {
-        "id": "7f7d82681a34d30e",
+        "id": "25d73fe8c8300610",
         "type": "inject",
         "z": "cde9bf556ca805e7",
         "name": "",
@@ -912,32 +1326,34 @@
             }
         ],
         "repeat": "",
-        "crontab": "",
+        "crontab": "00 00 * * *",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 740,
+        "x": 130,
+        "y": 220,
         "wires": [
             [
-                "94391f1be6dbfe2e"
+                "054115326ae81d82"
             ]
         ]
     },
     {
-        "id": "7269230f2114c527",
-        "type": "postgresql",
+        "id": "054115326ae81d82",
+        "type": "function",
         "z": "cde9bf556ca805e7",
-        "name": "",
-        "query": "INSERT INTO shiftdata(day, gsph, avg_eff,shift, totaldowntime )\nVALUES('{{{msg.payload.day}}}',{{{payload.shift_gsph}}},{{{msg.payload.avg_eff}}}, {{{msg.payload.downtime}}}  )",
-        "postgreSQLConfig": "6034ba1e7c15fb9e",
-        "split": false,
-        "rowsPerMsg": 1,
+        "name": "function 10",
+        "func": "let date = new Date;\nlet day = date.toLocaleDateString();\n\n\n\nglobal.set('current_day' , day)\n",
         "outputs": 1,
-        "x": 890,
-        "y": 580,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 220,
         "wires": [
             []
         ]
@@ -968,7 +1384,7 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 1170,
+        "x": 1310,
         "y": 240,
         "wires": [
             []
@@ -986,7 +1402,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
+        "x": 1060,
         "y": 240,
         "wires": [
             [
@@ -1002,7 +1418,7 @@
         "timerType": "delay",
         "timerDurationUnit": "second",
         "timerDurationType": "num",
-        "timerDuration": 5,
+        "timerDuration": 30,
         "timerLoopTimeoutUnit": "second",
         "timerLoopTimeoutType": "num",
         "timerLoopTimeout": 0,
@@ -1041,7 +1457,7 @@
         "pauseActionName": "PAUSE",
         "continueActionNameType": "str",
         "continueActionName": "CONTINUE",
-        "x": 380,
+        "x": 520,
         "y": 240,
         "wires": [
             [
@@ -1055,18 +1471,18 @@
         "type": "function",
         "z": "c6238f4648e04a71",
         "name": "Check Press State",
-        "func": "// if (flow.get('p04_production_state') == undefined){\n// flow.set('p04_production_state', false)\n// }\n\n\nflow.set('p04_production_state', true);\nmsg.payload = flow.get('p04_production_state');\nreturn msg;\n",
+        "func": "\n\nflow.set('p04_production_state', true);\nmsg.payload = flow.get('p04_production_state');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
-        "y": 300,
+        "x": 530,
+        "y": 180,
         "wires": [
             [
-                "022310190439f221"
+                "c20a1b4d9b50dc8d"
             ]
         ]
     },
@@ -1089,7 +1505,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
+        "x": 770,
         "y": 240,
         "wires": [
             [
@@ -1123,8 +1539,8 @@
                 "solarEvents": "sunrise,sunset"
             }
         ],
-        "x": 380,
-        "y": 340,
+        "x": 540,
+        "y": 300,
         "wires": [
             [
                 "022310190439f221"
@@ -1135,7 +1551,7 @@
         "id": "3ae92b49f2a7e593",
         "type": "function",
         "z": "c6238f4648e04a71",
-        "name": "function 5",
+        "name": "Check if Press idle",
         "func": "if (context.get('last_angle') == undefined){\n\n    context.set('last_angle', 0);\n\n\n\n}\n\n\nif (msg.payload != context.get('last_angle'))\n{\n    context.set('last_angle', msg.payload);\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
@@ -1143,18 +1559,230 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
+        "x": 230,
         "y": 240,
         "wires": [
             [
-                "52e8254bf2427aa5"
+                "52e8254bf2427aa5",
+                "ec1e2775b20959bb"
             ]
         ]
     },
     {
-        "id": "4e618ae9b1485194",
-        "type": "cronplus",
+        "id": "a3bc6ba5cd691287",
+        "type": "function",
         "z": "c6238f4648e04a71",
+        "name": "Writes Downtime bucket",
+        "func": "let object_keys = Object.keys(msg.payload[0].downtime);\n\nnode.warn(object_keys)\n\nlet totaldowntime  = calcDowntime(object_keys)\n\n\nif (totaldowntime < 60){\n    msg.payload = {\n        id : msg.payload[0].id,\n        bucket : \"Micro\"\n\n    }\n} else if (totaldowntime < 180) {\n       msg.payload = {\n        id : msg.payload[0].id,\n        bucket : \"Macro\"\n\n    }\n}else {\n       msg.payload = {\n        id : msg.payload[0].id,\n        bucket : \"Inter\"\n\n    }\n\n}\n\n\nreturn msg;\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[0].downtime.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[0].downtime.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[0].downtime.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "eb2b80a4e3c090b6"
+            ]
+        ]
+    },
+    {
+        "id": "9d837efc61b8a394",
+        "type": "complete",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "scope": [
+            "64ec4cb0f059f48d"
+        ],
+        "uncaught": false,
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "53f505871afe2eb8"
+            ]
+        ]
+    },
+    {
+        "id": "53f505871afe2eb8",
+        "type": "postgresql",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "query": "select downtime, id from downtime \nORDER BY ID DESC\nLIMIT 1;",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "a3bc6ba5cd691287"
+            ]
+        ]
+    },
+    {
+        "id": "d79177e6e1c45248",
+        "type": "inject",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "53f505871afe2eb8"
+            ]
+        ]
+    },
+    {
+        "id": "eb2b80a4e3c090b6",
+        "type": "postgresql",
+        "z": "c6238f4648e04a71",
+        "name": "",
+        "query": "UPDATE downtime\nSET bucket = '{{{msg.payload.bucket}}}'\nWHERE id = {{{msg.payload.id}}};",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 870,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4f9970e9026b2ec",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "function 8",
+        "func": "let shift_hour = global.get('active_shift_hour');\nlet strokes = Number(msg.payload[0].count);\nflow.set( \"parts_per_hour\" + \"[\" + shift_hour +  \"]\"  ,strokes );\nlet parts_per_hour = flow.get(\"parts_per_hour\");\nlet time_intervals = [];\n\n\nif (global.get('active_shift') == \"D\"){\n\n    time_intervals = [\"5:45-6:45\", \"6:45-7:45\", \"7:45-8:45\", \"8:45-9:45\", \"9:45-10:45\", \"10:45-11:45\", \"11:45-12:45\", \"12:45-13:45\"];\n}else if (global.get('active_shift') == \"A\"){\n    time_intervals = [\"13:45-14:45\", \"14:45-15:45\", \"15:45-16:45\", \"16:45-17:45\", \"17:45-18:45\", \"18:45-19:45\", \"19:45-20:45\", \"20:45-21:45\"];\n\n}\nelse{\n    time_intervals = [\"21:45-22:45\", \"22:45-23:45\", \"23:45-00:45\", \"00:45-01:45\", \"01:45-02:45\", \"02:45-03:45\", \"03:45-04:45\", \"04:45-05:45\"];\n\n}\n\nmsg.payload = [{\n    series: [\"Production\"],\n    data: [[[parts_per_hour[0]], [parts_per_hour[1]], [parts_per_hour[2]], [parts_per_hour[3]], [parts_per_hour[4]], [parts_per_hour[5]], [parts_per_hour[6]], [parts_per_hour[7]]]],\n    labels: time_intervals\n}];\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "d3db2d9b1d01712b"
+            ]
+        ]
+    },
+    {
+        "id": "25fbb845b46918be",
+        "type": "inject",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "35465b3555d4ec49"
+            ]
+        ]
+    },
+    {
+        "id": "c0b36442ce7578ee",
+        "type": "postgresql",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "",
+        "query": "SELECT count(*)\nFROM strokedata\nWHERE DATE(date) = '{{{msg.payload.day}}}' AND shift = '{{{msg.payload.active_shift}}}' AND shifthour = {{{msg.payload.active_shift_hour}}};\n",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "d4f9970e9026b2ec"
+            ]
+        ]
+    },
+    {
+        "id": "35465b3555d4ec49",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "function 9",
+        "func": "msg.payload = {\n\n    active_shift : global.get('active_shift'),\n    active_shift_hour: global.get('active_shift_hour'),\n    day : global.get('current_day')\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "c0b36442ce7578ee"
+            ]
+        ]
+    },
+    {
+        "id": "2bab4b5323409036",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "Clear array on start of shift",
+        "func": "let parts_array = new Array(8).fill(0);\n\nflow.set('parts_per_hour', parts_array);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a559594705a4e9e",
+        "type": "cronplus",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
         "name": "",
         "outputField": "payload",
         "timeZone": "",
@@ -1170,35 +1798,184 @@
                 "payloadType": "default",
                 "payload": "",
                 "expressionType": "cron",
-                "expression": "0 * * * * * *",
+                "expression": "45 5,13,21 * * * ",
                 "location": "",
                 "offset": "0",
                 "solarType": "all",
                 "solarEvents": "sunrise,sunset"
             }
         ],
-        "x": 240,
-        "y": 480,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "2bab4b5323409036"
+            ]
+        ]
+    },
+    {
+        "id": "d3db2d9b1d01712b",
+        "type": "ui_chart",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "",
+        "group": "31922b286864d455",
+        "order": 2,
+        "width": 26,
+        "height": 12,
+        "label": "Line End: P04",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 200,
         "wires": [
             []
         ]
     },
     {
-        "id": "a3bc6ba5cd691287",
+        "id": "fce2355146e94b14",
+        "type": "cronplus",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "0 45 * * * * *",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "75011c9dc6f0e056"
+            ]
+        ]
+    },
+    {
+        "id": "75011c9dc6f0e056",
         "type": "function",
-        "z": "c6238f4648e04a71",
-        "name": "function 9",
-        "func": "\nlet totaldowntime =0;\n\nnode.warn(totaldowntime);\n\n\n\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[9].sum.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[9].sum.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[9].sum.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "function 11",
+        "func": "msg.payload = {\n    job: \"MRFS-STAMP6RR2A\",\n    shifthour : global.get('active_shift_hour'),\n    asset: \"P04\"\n\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 480,
+        "x": 330,
+        "y": 280,
         "wires": [
-            []
+            [
+                "6f6bdf98a994696a"
+            ]
         ]
+    },
+    {
+        "id": "6f6bdf98a994696a",
+        "type": "postgresql",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "name": "",
+        "query": "Select spm, pph from pphdata where shifthour = {{{msg.payload.shifthour}}} AND job = '{{{msg.payload.job}}}';",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "9c016da8cec6c459",
+                "af1cd095c12d8d6a"
+            ]
+        ]
+    },
+    {
+        "id": "af1cd095c12d8d6a",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "group": "31922b286864d455",
+        "order": 27,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Target SPM:",
+        "format": "{{msg.payload[0].spm}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "24",
+        "color": "#000000",
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9c016da8cec6c459",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "8ccc6e9e9f09cd11",
+        "group": "31922b286864d455",
+        "order": 29,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Target PPH",
+        "format": "{{msg.payload[0].pph}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "24",
+        "color": "#000000",
+        "x": 730,
+        "y": 300,
+        "wires": []
     }
 ]
