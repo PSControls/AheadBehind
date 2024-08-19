@@ -55,13 +55,84 @@
         }
     },
     {
-        "id": "8ccc6e9e9f09cd11",
+        "id": "0d79cd42d33b5425",
         "type": "group",
-        "z": "67e87d017f864a87",
-        "name": "Line End Counter",
+        "z": "c6238f4648e04a71",
+        "name": "Downtime timer",
         "style": {
             "label": true,
-            "color": "#000000"
+            "color": "#000000",
+            "fill": "#ffbfbf"
+        },
+        "nodes": [
+            "ca1ac204874f1c83",
+            "64ec4cb0f059f48d",
+            "f726fb9bd416c0c6",
+            "52e8254bf2427aa5",
+            "201ff3d15d08dccc",
+            "87fad215bbb8dc2e",
+            "3ae92b49f2a7e593",
+            "022310190439f221",
+            "c20a1b4d9b50dc8d",
+            "599210bd09f4dff8",
+            "fd068044b1fc631d",
+            "796450a50c5f5093"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 1362,
+        "h": 202
+    },
+    {
+        "id": "da8866099255dcf8",
+        "type": "group",
+        "z": "c6238f4648e04a71",
+        "name": "Interlocks press until downtime form is complete",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "fill": "#ffbfbf"
+        },
+        "nodes": [
+            "72f92dcd49da8dce",
+            "37078546cc620973",
+            "1a2c750dfaefbf52",
+            "b8656acce0e39733",
+            "a69362160a832614",
+            "34f28e78f1114741",
+            "50207457c2352102",
+            "24d15b5bed03ff8d",
+            "5078af9d4958a46f",
+            "0fee5624c8b9f85a",
+            "d6e847f3b9e15ab3",
+            "ad34b5293b862921",
+            "247e2a805d733a99",
+            "d3b508a1694a833e",
+            "3f35ca8741b68f60",
+            "17131fa7e3fb474d",
+            "6ca019655950d7db",
+            "191da693cfff1acb",
+            "d5ec8c0dc5cb83b0",
+            "a70d0bea5e80e440",
+            "669ff6c6bcf3df5c",
+            "fd5b22e8af38f18b",
+            "3b1330e7a3c5e2fc",
+            "e9b293416086d130"
+        ],
+        "x": 34,
+        "y": 299,
+        "w": 1032,
+        "h": 562
+    },
+    {
+        "id": "9a4eb149e6945c58",
+        "type": "group",
+        "z": "67e87d017f864a87",
+        "name": "",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "fill": "#bfdbef"
         },
         "nodes": [
             "d4f9970e9026b2ec",
@@ -69,7 +140,6 @@
             "c0b36442ce7578ee",
             "35465b3555d4ec49",
             "2bab4b5323409036",
-            "5a559594705a4e9e",
             "d3db2d9b1d01712b",
             "fce2355146e94b14",
             "75011c9dc6f0e056",
@@ -80,12 +150,34 @@
             "0d919442da3e9760",
             "597298a71a666f30",
             "0c7fd349363fdd79",
-            "ab218c7f73cd9808"
+            "ab218c7f73cd9808",
+            "b3871f271b1ceec0",
+            "3cefe9c32a0c2f9f",
+            "5a559594705a4e9e",
+            "7535129e7d4b8459",
+            "c07abe59fe230e51",
+            "24757dfa2d1d3795",
+            "36bfdef17c9df756",
+            "f3afe77d563ce6cd",
+            "db76743f89aa1b0b",
+            "fb4ef688251b6e82",
+            "e5f22be3c6f61e68",
+            "934f5b099ced1492",
+            "9cf38fbcdf08ec14",
+            "0507e7d8b09f9606",
+            "045bde20f198f95f",
+            "5567f438c47ed9b7",
+            "bd216c87564d5dd4",
+            "53646c28a6934de5",
+            "825d3263d7bc18bc",
+            "67f9fa48404d9ef5",
+            "fc563a5b3c55e507",
+            "6a7a89e59a22a278"
         ],
         "x": 34,
         "y": 39,
-        "w": 992,
-        "h": 402
+        "w": 972,
+        "h": 942
     },
     {
         "id": "e29d8b1528191a41",
@@ -94,18 +186,20 @@
         "name": "UI elements",
         "style": {
             "label": true,
-            "color": "#000000"
+            "color": "#000000",
+            "fill": "#bfdbef"
         },
         "nodes": [
             "c2a92ab5d7b84877",
             "17071de22356894a",
             "55c579e04aba8d73",
-            "e83cd6922f512c0f"
+            "e83cd6922f512c0f",
+            "2ac3e628fbeeb526"
         ],
-        "x": 1034,
+        "x": 1074,
         "y": 39,
-        "w": 272,
-        "h": 262
+        "w": 232,
+        "h": 322
     },
     {
         "id": "b54675af84b91a1a",
@@ -114,7 +208,8 @@
         "name": "KPI Tracker",
         "style": {
             "label": true,
-            "color": "#000000"
+            "color": "#000000",
+            "fill": "#bfdbef"
         },
         "nodes": [
             "8aea3a9aecab667f",
@@ -136,81 +231,145 @@
             "538e43992e83ba57"
         ],
         "x": 34,
-        "y": 499,
+        "y": 1039,
         "w": 1192,
         "h": 322
     },
     {
-        "id": "0d79cd42d33b5425",
+        "id": "1c2f3950e9176424",
         "type": "group",
-        "z": "c6238f4648e04a71",
-        "name": "Downtime timer",
+        "z": "cde9bf556ca805e7",
+        "name": "Efficiency Calculations",
         "style": {
             "label": true,
             "color": "#000000",
-            "fill": "#bfdbef"
+            "fill": "#e3f3d3"
         },
         "nodes": [
-            "ca1ac204874f1c83",
-            "64ec4cb0f059f48d",
-            "f726fb9bd416c0c6",
-            "52e8254bf2427aa5",
-            "ec1e2775b20959bb",
-            "201ff3d15d08dccc",
-            "87fad215bbb8dc2e",
-            "3ae92b49f2a7e593",
-            "022310190439f221",
-            "c20a1b4d9b50dc8d",
-            "c952ec604a71349b"
+            "5f3cfe34af8c0bd6",
+            "3e6e190205588258",
+            "1e3cdd0139c3829b",
+            "908b9abda5cd6779",
+            "995a31b07349e407",
+            "dddbe3cbe4f32c78",
+            "8374969604ff5022",
+            "5c2b3b7508f5a369",
+            "482f6305b3103526",
+            "a121562e04632241",
+            "2fc253b015b8841f",
+            "445908a2db8b4404",
+            "7269230f2114c527"
         ],
-        "x": 34,
-        "y": 39,
-        "w": 1362,
-        "h": 202
+        "x": 14,
+        "y": 419,
+        "w": 1072,
+        "h": 242
     },
     {
-        "id": "3d2567dd0bca9512",
+        "id": "cecc316482bdd50a",
         "type": "group",
-        "z": "c6238f4648e04a71",
-        "name": "Writes downtime bucket",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "style": {
+            "label": true,
+            "color": "#000000",
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "bd45941e6c944cc7",
+            "782f50628b4e88bb",
+            "91b7f31d9fbcf493",
+            "29aa17f635819cce",
+            "6c632faccbb0e219",
+            "843965800cb56943",
+            "81dad3eec18fdae9",
+            "25d73fe8c8300610",
+            "054115326ae81d82",
+            "408092bbaad8ae97"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 592,
+        "h": 242
+    },
+    {
+        "id": "7799638c8e7043f5",
+        "type": "group",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "92d8ea3b5543c66e",
+            "4268820a57df8a04",
+            "8a0563cf63dfd1ac",
+            "96e6c59667913a3c",
+            "f708bb888c362e55",
+            "50c171c7337d6f71"
+        ],
+        "x": 14,
+        "y": 279,
+        "w": 782,
+        "h": 122
+    },
+    {
+        "id": "4d8505f3f2f63a2b",
+        "type": "group",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "866bd2700507b58f",
+            "ec42a1e614c56b04",
+            "a1519f5d014ee4d9"
+        ],
+        "x": 14,
+        "y": 699,
+        "w": 432,
+        "h": 122
+    },
+    {
+        "id": "8684a2f4943c48c6",
+        "type": "group",
+        "z": "67e87d017f864a87",
+        "name": "Average KPIs",
         "style": {
             "label": true,
             "color": "#000000",
             "fill": "#bfdbef"
         },
         "nodes": [
-            "a3bc6ba5cd691287",
-            "9d837efc61b8a394",
-            "53f505871afe2eb8",
-            "eb2b80a4e3c090b6",
-            "7f4942862ff2ad94",
-            "b3c61293c31ae4d3",
-            "fdfbb552c972b1cb",
-            "74fe7c212aef62e6",
-            "e439239f5f08e84a",
-            "22d0b0f1d4790945",
-            "8ea8de551bb969aa",
-            "fc9d260557c20734",
-            "1e71d00ae7166a6e",
-            "4b843b224dd4316b",
-            "e96a41c2a963ddb0",
-            "d0e8dfb55b829d85",
-            "cc85bbb25b00ce20",
-            "47cf9385514594f3",
-            "c6c8df1c184a16fe"
+            "a645d83276ef403c",
+            "499d39d436bde848",
+            "98792b2462a49132",
+            "4e2839d2925523a4",
+            "06d0f1f9d4134348",
+            "d7df78bc39502bd3",
+            "c5ac5e7530113c2b",
+            "6a7d7848080926cd",
+            "21e8e926f176a83d",
+            "f0c0d010fe159800",
+            "ad148c89324e3997",
+            "5dddca9cfe03c7eb",
+            "b0d4805bf8d1239b"
         ],
-        "x": 44,
-        "y": 299,
-        "w": 1102,
-        "h": 462
+        "x": 34,
+        "y": 1419,
+        "w": 1032,
+        "h": 322
     },
     {
         "id": "022310190439f221",
         "type": "junction",
         "z": "c6238f4648e04a71",
         "g": "0d79cd42d33b5425",
-        "x": 930,
-        "y": 200,
+        "x": 880,
+        "y": 220,
         "wires": [
             [
                 "f726fb9bd416c0c6"
@@ -222,8 +381,8 @@
         "type": "junction",
         "z": "c6238f4648e04a71",
         "g": "0d79cd42d33b5425",
-        "x": 930,
-        "y": 80,
+        "x": 880,
+        "y": 100,
         "wires": [
             [
                 "f726fb9bd416c0c6"
@@ -383,9 +542,9 @@
             "sizes": {
                 "sx": 48,
                 "sy": 48,
-                "gx": 6,
+                "gx": 0,
                 "gy": 6,
-                "cx": 6,
+                "cx": 0,
                 "cy": 6,
                 "px": 0,
                 "py": 0
@@ -424,7 +583,27 @@
         "className": ""
     },
     {
-        "id": "142599083a506da6",
+        "id": "0d7ad511bd0fb646",
+        "type": "ui_tab",
+        "name": "Downtime",
+        "icon": "access_time",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2e55cdce086fb22b",
+        "type": "ui_group",
+        "name": "Enter Downtime ",
+        "tab": "0d7ad511bd0fb646",
+        "order": 1,
+        "disp": false,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "315efc61b7a8945f",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -434,7 +613,7 @@
         "height": 1
     },
     {
-        "id": "f03bf429f3e3e8ff",
+        "id": "d211843cc3573267",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -444,7 +623,7 @@
         "height": 1
     },
     {
-        "id": "02c283b2ff0e0b2d",
+        "id": "3a9c6eb89625fecf",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -454,7 +633,7 @@
         "height": 1
     },
     {
-        "id": "6ee73fc949a22284",
+        "id": "b02cd9303eb97aea",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -464,7 +643,7 @@
         "height": 1
     },
     {
-        "id": "eb2405094afcb31c",
+        "id": "8c8b5e0ff6e5ee7e",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -474,7 +653,7 @@
         "height": 1
     },
     {
-        "id": "0de75ae5dd5a07e6",
+        "id": "a2f57459715f47a6",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -484,7 +663,7 @@
         "height": 1
     },
     {
-        "id": "c19a5e0ca04c10a7",
+        "id": "e7edcebca4741958",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -494,7 +673,7 @@
         "height": 1
     },
     {
-        "id": "afebd7c5ede6cf7d",
+        "id": "e65795f1e44f1bf7",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -504,7 +683,7 @@
         "height": 1
     },
     {
-        "id": "e41d851ac5ebcdf0",
+        "id": "bb4d748e1faf906d",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -514,7 +693,7 @@
         "height": 1
     },
     {
-        "id": "ae90fd931a0796c9",
+        "id": "d4c800af69ded294",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -524,7 +703,7 @@
         "height": 1
     },
     {
-        "id": "41daf60bf6205788",
+        "id": "c1b2bbd1496e741f",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -534,7 +713,7 @@
         "height": 1
     },
     {
-        "id": "9e596323a4047dbb",
+        "id": "60f5ce8bcc3fdcf6",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -544,7 +723,7 @@
         "height": 1
     },
     {
-        "id": "386ae8b23f326661",
+        "id": "a1bd725d4dc3b95c",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -554,7 +733,7 @@
         "height": 1
     },
     {
-        "id": "e30667d55ca4f6f5",
+        "id": "d40dcda4c98a2ef5",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -564,7 +743,7 @@
         "height": 1
     },
     {
-        "id": "021e70144d68920d",
+        "id": "c65317bc4f69e7a0",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -574,7 +753,7 @@
         "height": 1
     },
     {
-        "id": "4dad25ca5c63210a",
+        "id": "aa7133b2a04c7509",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -584,7 +763,7 @@
         "height": 1
     },
     {
-        "id": "7380a5d41bc38549",
+        "id": "20f4a876a27e57ac",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -594,7 +773,7 @@
         "height": 1
     },
     {
-        "id": "270e3aa7ae3759df",
+        "id": "8069237edb51dd41",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -604,7 +783,7 @@
         "height": 1
     },
     {
-        "id": "9ed0ac29a482797c",
+        "id": "b03965a8e5db7f91",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -614,7 +793,7 @@
         "height": 1
     },
     {
-        "id": "779eada16d565d4d",
+        "id": "0bc688d7d6133340",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -624,7 +803,7 @@
         "height": 1
     },
     {
-        "id": "483124e0134d8d5d",
+        "id": "32e64785e8ba14cb",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -634,7 +813,7 @@
         "height": 1
     },
     {
-        "id": "a58546acdbf41b81",
+        "id": "d5dd7156599d6065",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -644,7 +823,7 @@
         "height": 1
     },
     {
-        "id": "8c611fe869762216",
+        "id": "2e463aa034cee7f8",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -654,7 +833,7 @@
         "height": 1
     },
     {
-        "id": "a7f8ee338e6c9013",
+        "id": "fcd8d141a954dfd0",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -664,7 +843,7 @@
         "height": 1
     },
     {
-        "id": "272cb5ed26979e92",
+        "id": "d4f2648fa73280ee",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -674,7 +853,7 @@
         "height": 1
     },
     {
-        "id": "15c048c6f3d282f5",
+        "id": "9b76825d659da551",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -684,7 +863,7 @@
         "height": 1
     },
     {
-        "id": "3c2b9828e2591fed",
+        "id": "2cefb2d282eac7a9",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -694,7 +873,7 @@
         "height": 1
     },
     {
-        "id": "b6b35ca67fb7955e",
+        "id": "f25ca29afa8ffe26",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -704,7 +883,7 @@
         "height": 1
     },
     {
-        "id": "e181a12f3e2b4ac9",
+        "id": "3affc84394beb313",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -714,7 +893,7 @@
         "height": 1
     },
     {
-        "id": "0fb1ceb20169ea12",
+        "id": "2386d2aa00eb163f",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -724,17 +903,17 @@
         "height": 1
     },
     {
-        "id": "c1779ff5afcd0ca8",
+        "id": "bb3703d4384a9f47",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
         "group": "a779266e210b2994",
         "order": 39,
-        "width": 3,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "d707420cb91b6034",
+        "id": "ad46c36bb80eff8e",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -744,7 +923,7 @@
         "height": 1
     },
     {
-        "id": "9111b4bb0d43c964",
+        "id": "44094798b9bc8e27",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -754,7 +933,7 @@
         "height": 1
     },
     {
-        "id": "36053dfb68c40e86",
+        "id": "1b2dd7f5ebaec9a3",
         "type": "ui_spacer",
         "z": "67e87d017f864a87",
         "name": "spacer",
@@ -764,76 +943,417 @@
         "height": 1
     },
     {
-        "id": "209440189f5c3cf1",
-        "type": "ui-base",
-        "name": "My Dashboard",
-        "path": "/dashboard",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "showPageTitle": true,
-        "navigationStyle": "default",
-        "titleBarStyle": "default"
-    },
-    {
-        "id": "dd5dafe62633bf4c",
-        "type": "ui-theme",
-        "name": "Default Theme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
-        "id": "b2e8c6ea1196e2f3",
-        "type": "ui-page",
-        "name": "Page 1",
-        "ui": "209440189f5c3cf1",
-        "path": "/page1",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "dd5dafe62633bf4c",
+        "id": "7bd31afb8c5ecfe6",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
         "order": 1,
-        "className": "",
-        "visible": true,
-        "disabled": false
+        "width": 30,
+        "height": 1
     },
     {
-        "id": "9868460d354f350c",
-        "type": "ui-group",
-        "name": "My Group",
-        "page": "b2e8c6ea1196e2f3",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": true,
-        "disabled": false
+        "id": "42ccf3936f4483c3",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 2,
+        "width": 30,
+        "height": 1
     },
     {
-        "id": "0d7ad511bd0fb646",
-        "type": "ui_tab",
-        "name": "Downtime",
-        "icon": "dashboard",
+        "id": "1675adc6fe02bc7e",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
         "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5ec5621f9af7d24e",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 5,
+        "width": 23,
+        "height": 1
+    },
+    {
+        "id": "556a0ffdd0673266",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "7188bb9d12067c9a",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "99c3e3c3750433fc",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 9,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "5816564a0703e147",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 10,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e8ae95a29f49718a",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 12,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "0d77d3b0ef5c1a9f",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 13,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "37c3982d1411d9a2",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 14,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "1220a3cf5d071fad",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 16,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "6a571ab88b1bfc16",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 17,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "51181636e572094d",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 19,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "cc475b2afad021b0",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 21,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "2c315c5e1d38efff",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 22,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "846fa2555c33a452",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "2e55cdce086fb22b",
+        "order": 24,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "2c0b7c4d14a5dbd1",
+        "type": "ui_tab",
+        "name": "Average KPIs",
+        "icon": "date_range",
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
     {
-        "id": "29a6857010a7a69e",
+        "id": "eec6e08df453ddc6",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "2c0b7c4d14a5dbd1",
+        "order": 1,
+        "disp": false,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3308517db2f3b5b8",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 1,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "1bcf3597ec70abb5",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "32f3b75d96e8f35e",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "69d2f8ec54bc689e",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "342caf1ebc18ce08",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 10,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "6c0c6c3fe0ee01b0",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 12,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "2583181e28746d4d",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 13,
+        "width": 30,
+        "height": 1
+    },
+    {
+        "id": "f6f2adbc1569ae76",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 14,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "ef3e4130a1b72c35",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 16,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "8df82f0ad0f6a744",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 18,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "f6ed24f2ca97b549",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 19,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "f607a9f82e6cc15b",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 20,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "96d0044590ccc18a",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 21,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a2858a079c4ce438",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 22,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "aab380fb75bf0816",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 23,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "8e3cd5cfd3a66f58",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 24,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "5fa55bd9c5c8b090",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 25,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "9d0eef7b1a951af7",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 26,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "30709207faa27767",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 27,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a559f8d7317b6965",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 28,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "ec418736a55928e8",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 29,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "ef1705defd6549db",
+        "type": "ui_spacer",
+        "z": "67e87d017f864a87",
+        "name": "spacer",
+        "group": "eec6e08df453ddc6",
+        "order": 30,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "d58b9232acfcafd4",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -843,17 +1363,17 @@
         "height": 1
     },
     {
-        "id": "f73ea3b58dee1981",
+        "id": "cbef37dfff021641",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 3,
-        "width": 5,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "5a9ab459b7e7bea4",
+        "id": "ca132752227cbe13",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -863,17 +1383,17 @@
         "height": 1
     },
     {
-        "id": "cfe3dce36686bb03",
+        "id": "ad3d4902d7d31cd8",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 5,
-        "width": 5,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "019c353a8c87277d",
+        "id": "6809394f16f025b0",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -883,27 +1403,17 @@
         "height": 1
     },
     {
-        "id": "ebef0c72a60e6214",
+        "id": "1c3fd507514b68c0",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
-        "order": 7,
+        "order": 8,
         "width": 1,
         "height": 1
     },
     {
-        "id": "43ef12fa0abc2f22",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 9,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d3931bc41e3c116f",
+        "id": "17e440a6c6783b6b",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -913,7 +1423,17 @@
         "height": 1
     },
     {
-        "id": "6a26d4cebdcb947c",
+        "id": "c50add7af5090a31",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "8a371b451df65cf1",
+        "order": 11,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "957eea9e7f9acd15",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -923,17 +1443,7 @@
         "height": 1
     },
     {
-        "id": "75feb670f3a0099f",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 13,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "15c7ac882c38c17b",
+        "id": "f4c3f464cf54e756",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -943,37 +1453,37 @@
         "height": 1
     },
     {
-        "id": "d4d212498b785802",
+        "id": "ead75733f1a41b14",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 15,
-        "width": 1,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "99583fba60c35faa",
+        "id": "e7ac543d1376e628",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
-        "order": 17,
+        "order": 16,
         "width": 1,
         "height": 1
     },
     {
-        "id": "da083d82d4a2427f",
+        "id": "3154d9125d1fba55",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 18,
-        "width": 5,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "f03c501bca486b79",
+        "id": "27cc8611bb3bd5c3",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -983,7 +1493,7 @@
         "height": 1
     },
     {
-        "id": "39eaafaf1953ba6b",
+        "id": "8083c6f913e2a0d8",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -993,7 +1503,17 @@
         "height": 1
     },
     {
-        "id": "1a163063dc4e363e",
+        "id": "197e730aa06a1a42",
+        "type": "ui_spacer",
+        "z": "c6238f4648e04a71",
+        "name": "spacer",
+        "group": "8a371b451df65cf1",
+        "order": 21,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "b9a35f73eb267817",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -1003,37 +1523,27 @@
         "height": 1
     },
     {
-        "id": "01a88ccf920db633",
+        "id": "a7c0d75279e32124",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 23,
-        "width": 1,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "5cf8620dd3d2565d",
+        "id": "1e1b9db4f0d81de2",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 24,
-        "width": 1,
+        "width": 2,
         "height": 1
     },
     {
-        "id": "e62067e9e607d553",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 25,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "f896260651f8e243",
+        "id": "0f3eda44b003c10e",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -1043,17 +1553,7 @@
         "height": 1
     },
     {
-        "id": "096d64f9d512611e",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 27,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "10cda1cd4d56477b",
+        "id": "50229e2f4645c05d",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
@@ -1063,204 +1563,103 @@
         "height": 1
     },
     {
-        "id": "3f00a589579cf026",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 29,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "6a0b17e64537aba5",
+        "id": "0cbbe75ffc3ea422",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
         "group": "8a371b451df65cf1",
         "order": 30,
-        "width": 30,
-        "height": 1
-    },
-    {
-        "id": "52f338908a2d4dac",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 31,
-        "width": 20,
-        "height": 1
-    },
-    {
-        "id": "44510411e94eb4a6",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "8a371b451df65cf1",
-        "order": 33,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "2e55cdce086fb22b",
-        "type": "ui_group",
-        "name": "Enter Downtime ",
-        "tab": "0d7ad511bd0fb646",
-        "order": 1,
-        "disp": true,
-        "width": 30,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "2a654e5615767192",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 2,
         "width": 1,
         "height": 1
     },
     {
-        "id": "cc7c1f79ce5bb5c2",
+        "id": "4d0a3f4c0d0347ea",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 4,
-        "width": 7,
+        "group": "8a371b451df65cf1",
+        "order": 32,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "a132a3afead57671",
+        "id": "3c2f90a725f1377c",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 6,
-        "width": 16,
+        "group": "8a371b451df65cf1",
+        "order": 34,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "a6836e771917fd77",
+        "id": "295a59944f27cd06",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 7,
-        "width": 30,
+        "group": "8a371b451df65cf1",
+        "order": 36,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "e9f0a2fbb413e7f0",
+        "id": "8620d892b20a8f4b",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 8,
-        "width": 30,
+        "group": "8a371b451df65cf1",
+        "order": 38,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "faec912ebb8dffa9",
+        "id": "515db564339889fc",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 9,
-        "width": 30,
+        "group": "8a371b451df65cf1",
+        "order": 40,
+        "width": 5,
         "height": 1
     },
     {
-        "id": "8dc1eac7055fcd79",
+        "id": "fe9d506985139340",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 10,
-        "width": 6,
+        "group": "8a371b451df65cf1",
+        "order": 41,
+        "width": 10,
         "height": 1
     },
     {
-        "id": "ee423126b2ac7a93",
+        "id": "5dcbad767b204037",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 12,
-        "width": 6,
+        "group": "8a371b451df65cf1",
+        "order": 43,
+        "width": 12,
         "height": 1
     },
     {
-        "id": "c77b25a191588c0c",
+        "id": "4aedfcd7a8353e73",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 13,
-        "width": 30,
+        "group": "8a371b451df65cf1",
+        "order": 44,
+        "width": 10,
         "height": 1
     },
     {
-        "id": "ba0929aa307914d0",
+        "id": "72551de5d9b8658e",
         "type": "ui_spacer",
         "z": "c6238f4648e04a71",
         "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 14,
-        "width": 30,
-        "height": 1
-    },
-    {
-        "id": "6f44fc83875db704",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 15,
-        "width": 30,
-        "height": 1
-    },
-    {
-        "id": "22b9886a214db5b3",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 17,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "7f469875c95f42eb",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 19,
-        "width": 7,
-        "height": 1
-    },
-    {
-        "id": "21e4df8091c3b3f7",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 20,
-        "width": 7,
-        "height": 1
-    },
-    {
-        "id": "31d6df0eef670141",
-        "type": "ui_spacer",
-        "z": "c6238f4648e04a71",
-        "name": "spacer",
-        "group": "2e55cdce086fb22b",
-        "order": 21,
-        "width": 7,
+        "group": "8a371b451df65cf1",
+        "order": 46,
+        "width": 11,
         "height": 1
     },
     {
@@ -1398,7 +1797,7 @@
         "type": "function",
         "z": "ef1306654341cf48",
         "name": "parse live spm data",
-        "func": "var process_data = msg.payload.data.payload[\"/iolinkmaster/port[1]/iolinkdevice/pdin\"].data;\nvar live_spm = 0; \n\nprocess_data = process_data.substring(12, 20);\nglobal.set('live_spm', parseInt(process_data, 16) * 0.1) ;\n\nlive_spm = global.get('live_spm');\nlive_spm = live_spm.toFixed(0);\nmsg.payload = live_spm;\n\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload });\n\nreturn msg;",
+        "func": "var process_data = msg.payload.data.payload[\"/iolinkmaster/port[1]/iolinkdevice/pdin\"].data;\nvar live_spm = 0; \n\nprocess_data = process_data.substring(12, 20);\nglobal.set('live_spm', parseInt(process_data, 16) * 0.1) ;\n\nif (global.get('live_spm') > 60)\n{\n    global.set('live_spm', 0);\n}\n\nlive_spm = global.get('live_spm');\nlive_spm = live_spm.toFixed(0);\nmsg.payload = live_spm;\n\nnode.status({ fill: \"blue\", shape: \"dot\", text: msg.payload });\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1488,7 +1887,7 @@
         "type": "postgresql",
         "z": "ef1306654341cf48",
         "name": "",
-        "query": "DELETE FROM pph;\nCOPY pph(asset, job, shifthour, pph) FROM '/home/controls-orin-1/Desktop/pscMasterPPH.csv' DELIMITER ',' CSV HEADER;",
+        "query": "DELETE FROM pphdata;\nCOPY pphdata(asset, job, shifthour, pph, spm) FROM '/home/controls-orin-1/Desktop/pscMasterPPH.csv' DELIMITER ',' CSV HEADER;",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
@@ -1526,6 +1925,7 @@
         "id": "bd45941e6c944cc7",
         "type": "inject",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "props": [
             {
@@ -1555,6 +1955,7 @@
         "id": "782f50628b4e88bb",
         "type": "comment",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "determine active shift",
         "info": "",
         "x": 140,
@@ -1565,6 +1966,7 @@
         "id": "91b7f31d9fbcf493",
         "type": "inject",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "props": [
             {
@@ -1594,6 +1996,7 @@
         "id": "29aa17f635819cce",
         "type": "inject",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "props": [
             {
@@ -1623,6 +2026,7 @@
         "id": "6c632faccbb0e219",
         "type": "change",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "rules": [
             {
@@ -1641,13 +2045,16 @@
         "x": 340,
         "y": 100,
         "wires": [
-            []
+            [
+                "408092bbaad8ae97"
+            ]
         ]
     },
     {
         "id": "843965800cb56943",
         "type": "change",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "rules": [
             {
@@ -1666,13 +2073,16 @@
         "x": 340,
         "y": 140,
         "wires": [
-            []
+            [
+                "408092bbaad8ae97"
+            ]
         ]
     },
     {
         "id": "81dad3eec18fdae9",
         "type": "change",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "rules": [
             {
@@ -1691,19 +2101,22 @@
         "x": 340,
         "y": 180,
         "wires": [
-            []
+            [
+                "408092bbaad8ae97"
+            ]
         ]
     },
     {
         "id": "92d8ea3b5543c66e",
         "type": "link in",
         "z": "cde9bf556ca805e7",
+        "g": "7799638c8e7043f5",
         "name": "(Shift Efficiency FB) Press angle in",
         "links": [
             "a4d4a07606b95a9c"
         ],
         "x": 65,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "4268820a57df8a04"
@@ -1714,16 +2127,17 @@
         "id": "4268820a57df8a04",
         "type": "function",
         "z": "cde9bf556ca805e7",
-        "name": "function 1",
-        "func": "global.set('press_angle', msg.payload);\n\nif (!(global.get('stroke_count')))\n{\n    global.set('stroke_count', 0);\n};\n\nif (msg.payload >= 320 && msg.payload <= 330) {\n    if (flow.get('oneshot') == true) {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n\n        msg.payload = {\n            shifthour: global.get('active_shift_hour'),\n            shift: global.get('active_shift'),\n            stroke: global.get('stroke_count')\n        };\n\n    }\n    return msg;\n}\nelse flow.set('oneshot', true);\n\n\n\nnode.status({ fill: \"blue\", shape: \"dot\", text: global.get('stroke_count')});\n\nreturn;",
+        "g": "7799638c8e7043f5",
+        "name": "Determine stroke",
+        "func": "global.set('press_angle', msg.payload);\n\n// initialize stroke count\nif (!(global.get('stroke_count')))\n{\n    global.set('stroke_count', 0);\n};\n// checks if press is between 320 and 330 indicating a stroke\n\nif (msg.payload >= 320 && msg.payload <= 330) {\n    // determines if stroke has already been accounted for\n    if (flow.get('oneshot') == true) {\n        global.set('stroke_count', global.get('stroke_count') + 1);\n        flow.set('oneshot', false);\n\n        // sends time stroke occured to database\n        msg.payload = {\n            shifthour: global.get('active_shift_hour'),\n            shift: global.get('active_shift'),\n            stroke: global.get('stroke_count')\n        };\n\n        node.status({ fill: \"blue\", shape: \"dot\", text: global.get('stroke_count') });\n\n        return msg;\n    }\n    \n}\nelse flow.set('oneshot', true);\n\n\n// displays stroke count below node\nnode.status({ fill: \"blue\", shape: \"dot\", text: global.get('stroke_count')});\n\nreturn;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nflow.set('oneshot', false);\n",
         "finalize": "",
         "libs": [],
-        "x": 170,
-        "y": 320,
+        "x": 200,
+        "y": 360,
         "wires": [
             [
                 "50c171c7337d6f71"
@@ -1734,24 +2148,26 @@
         "id": "8a0563cf63dfd1ac",
         "type": "comment",
         "z": "cde9bf556ca805e7",
+        "g": "7799638c8e7043f5",
         "name": "increment stroke based on press angle",
         "info": "",
         "x": 190,
-        "y": 280,
+        "y": 320,
         "wires": []
     },
     {
         "id": "96e6c59667913a3c",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
+        "g": "7799638c8e7043f5",
         "name": "",
         "query": "INSERT INTO strokedata(date, asset, shifthour, shift) \nVALUES (NOW() AT TIME ZONE 'America/New_York', \n'P04', \n{{{msg.payload.shifthour}}}, \n'{{{msg.payload.shift}}}');",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 480,
-        "y": 320,
+        "x": 570,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1760,16 +2176,18 @@
         "id": "f708bb888c362e55",
         "type": "comment",
         "z": "cde9bf556ca805e7",
+        "g": "7799638c8e7043f5",
         "name": "send stroke id and timestamp to local db",
         "info": "",
-        "x": 570,
-        "y": 280,
+        "x": 610,
+        "y": 320,
         "wires": []
     },
     {
         "id": "50c171c7337d6f71",
         "type": "rbe",
         "z": "cde9bf556ca805e7",
+        "g": "7799638c8e7043f5",
         "name": "",
         "func": "rbe",
         "gap": "",
@@ -1778,8 +2196,8 @@
         "septopics": true,
         "property": "payload.stroke",
         "topi": "topic",
-        "x": 320,
-        "y": 320,
+        "x": 390,
+        "y": 360,
         "wires": [
             [
                 "96e6c59667913a3c"
@@ -1790,26 +2208,29 @@
         "id": "5f3cfe34af8c0bd6",
         "type": "comment",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "calculate shift KPIs",
         "info": "",
         "x": 130,
-        "y": 520,
+        "y": 580,
         "wires": []
     },
     {
         "id": "3e6e190205588258",
         "type": "comment",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "calculate hourly KPIs",
         "info": "",
         "x": 140,
-        "y": 400,
+        "y": 460,
         "wires": []
     },
     {
         "id": "1e3cdd0139c3829b",
         "type": "cronplus",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "",
         "outputField": "payload",
         "timeZone": "",
@@ -1833,7 +2254,7 @@
             }
         ],
         "x": 120,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "995a31b07349e407",
@@ -1845,14 +2266,15 @@
         "id": "908b9abda5cd6779",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "",
         "query": "SELECT pph FROM pphdata\nWHERE asset = 'P04' AND \njob = 'MRFS-STAMP6RR2A' AND \nshifthour =  '{{{msg.payload}}}';\nSELECT COUNT(*) from strokedata where date >= now() - interval '1 hours';",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 510,
-        "y": 420,
+        "x": 590,
+        "y": 480,
         "wires": [
             [
                 "8374969604ff5022"
@@ -1863,7 +2285,8 @@
         "id": "995a31b07349e407",
         "type": "function",
         "z": "cde9bf556ca805e7",
-        "name": "function 2",
+        "g": "1c2f3950e9176424",
+        "name": "Get active shift hour",
         "func": "function map_hours(currentHour) {\n    const mapping = {\n        21:1, 22:2, 23:3, 0:4, 1:5, 2:6, 3:7, 4:8, 5:1, 6:2, 7:3, 8:4, 9:5, 10:6, 11:7, 12:8, 13:1, 14:2, 15:3, 16:4, 17:5, 18:6, 19:7, 20:8 \n    }\n\n    var shift_hour = mapping[currentHour];\n    return shift_hour;\n}\n\nconst now = new Date();\nconst currentHour = now.getHours();\n\nglobal.set('active_shift_hour', map_hours(currentHour));\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1871,8 +2294,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 460,
+        "x": 380,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1881,16 +2304,17 @@
         "id": "dddbe3cbe4f32c78",
         "type": "function",
         "z": "cde9bf556ca805e7",
-        "name": "function 3",
-        "func": "function map_hours(currentHour) {\n    const mapping = {\n        21:8, 22:1, 23:2, 0:3, 1:4, 2:5, 3:6, 4:7, \n        5:8, 6:1, 7:2, 8:3, 9:4, 10:5, 11:6, 12:7, \n        13:8, 14:1, 15:2, 16:3, 17:4, 18:5, 19:6, 20:7 \n    }\n\n    var shift_hour = mapping[currentHour];\n    return shift_hour;\n}\n\nconst now = new Date();\nconst currentHour = now.getHours();\n\nglobal.set('last_shift_hour', map_hours(currentHour));\nmsg.payload = global.get('last_shift_hour');\n\n\nreturn msg;",
+        "g": "1c2f3950e9176424",
+        "name": "Get shift hour to report",
+        "func": "function map_hours(currentHour) {\n    const mapping = {\n        21:8, 22:1, 23:2, 0:3, 1:4, 2:5, 3:6, 4:7, \n        5:8, 6:1, 7:2, 8:3, 9:4, 10:5, 11:6, 12:7, \n        13:8, 14:1, 15:2, 16:3, 17:4, 18:5, 19:6, 20:7 \n    }\n\n    var shift_hour = mapping[currentHour];\n    return shift_hour;\n}\n\n\nconst now = new Date();\nconst currentHour = now.getHours();\n\nglobal.set('last_shift_hour', map_hours(currentHour));\nmsg.payload = global.get('last_shift_hour');\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 420,
+        "x": 380,
+        "y": 480,
         "wires": [
             [
                 "908b9abda5cd6779"
@@ -1901,16 +2325,17 @@
         "id": "8374969604ff5022",
         "type": "function",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "Calc hourly eff",
-        "func": "let hourly_eff =100* Number(msg.payload[1].count)/ msg.payload[0].pph;\n\nlet date = new Date;\nlet hour = date.getHours();\nlet shift = \"\"\nif (hour >5 && hour <= 13)\n{\n shift = \"D\";\n\n}\nelse if (hour >13 && hour <= 21)\n{\n shift = \"A\";\n\n}\nelse{\n    shift = \"N\"\n}\n\nmsg.payload = {\n    eff: hourly_eff,\n    shifthour: global.get('last_shift_hour'),\n    asset : \"P04\",\n    current_shift: shift \n}\n\nreturn msg;\n\n\n\n\n",
+        "func": "let hourly_eff =100* Number(msg.payload[1].count)/ msg.payload[0].pph;\n\nlet date = new Date;\nlet hour = date.getHours();\nlet shift = \"\"\nif (hour >5 && hour <= 13)\n{\n shift = \"D\";\n\n}\nelse if (hour >13 && hour <= 21)\n{\n shift = \"A\";\n\n}\nelse{\n    shift = \"N\"\n}\n\nmsg.payload = {\n    eff: hourly_eff,\n    shifthour: global.get('last_shift_hour'),\n    asset : \"P04\",\n    current_shift: shift,\n    strokes: msg.payload[1].count\n}\n\nreturn msg;\n\n\n\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 420,
+        "x": 800,
+        "y": 480,
         "wires": [
             [
                 "482f6305b3103526"
@@ -1921,6 +2346,7 @@
         "id": "5c2b3b7508f5a369",
         "type": "cronplus",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "",
         "outputField": "payload",
         "timeZone": "",
@@ -1944,7 +2370,7 @@
             }
         ],
         "x": 120,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "2fc253b015b8841f"
@@ -1955,14 +2381,15 @@
         "id": "482f6305b3103526",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "",
-        "query": "INSERT INTO hourlydata(hour, shifthour, efficiency, asset, shift)\nVALUES(Now(), {{{msg.payload.shifthour}}},{{{msg.payload.eff}}}, '{{{msg.payload.asset}}}', '{{{msg.payload.current_shift}}}')",
+        "query": "INSERT INTO hourlydata(hour, shifthour, efficiency, asset, shift, strokes)\nVALUES(Now(), {{{msg.payload.shifthour}}},{{{msg.payload.eff}}}, '{{{msg.payload.asset}}}', '{{{msg.payload.current_shift}}}', {{{msg.payload.strokes}}})",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 890,
-        "y": 420,
+        "x": 990,
+        "y": 480,
         "wires": [
             []
         ]
@@ -1971,14 +2398,15 @@
         "id": "a121562e04632241",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "",
-        "query": "SELECT COUNT(id) FROM strokedata WHERE date >= NOW() - INTERVAL '8 hour';\nSELECT efficiency from hourlydata \nWHERE shift = 'D'\n\nORDER BY ID DESC LIMIT 8; \nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute';\n\n\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'Micro';\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'Macro';\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'Inter';\n\n\n",
+        "query": "SELECT COUNT(id) FROM strokedata WHERE date >= NOW() - INTERVAL '8 hour';\nSELECT efficiency from hourlydata \nWHERE shift = '{{{msg.payload}}}'\n\nORDER BY ID DESC LIMIT 8; \nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute';\n\n\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'Micro';\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'prod';\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'tool';\nSELECT sum(downtime) from downtime where startdate >= Now() - INTERVAL '8 hour 1 minute' AND bucket = 'main';\n\n\n",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 450,
-        "y": 560,
+        "x": 510,
+        "y": 620,
         "wires": [
             [
                 "445908a2db8b4404"
@@ -1989,7 +2417,8 @@
         "id": "2fc253b015b8841f",
         "type": "function",
         "z": "cde9bf556ca805e7",
-        "name": "function 6",
+        "g": "1c2f3950e9176424",
+        "name": "Get shift to report",
         "func": "let date = new Date;\n\nlet hour = date.getHours();\nlet shift = \"\";\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\nmsg.payload = shift;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1997,8 +2426,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 560,
+        "x": 310,
+        "y": 620,
         "wires": [
             [
                 "a121562e04632241"
@@ -2009,16 +2438,17 @@
         "id": "445908a2db8b4404",
         "type": "function",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "Calc shift eff",
-        "func": "let shift_eff = calcEff(msg.payload);\nlet gsph = Number(msg.payload[0].count)/ 7.083;\nlet shift = \"\";\nlet date = new Date;\nlet hour = date.getHours();\n\n//get object keys to calculate downtime in seconds\nlet object_keys_totaldowtime = Object.keys(msg.payload[9].sum);\nlet object_keys_micro = Object.keys(msg.payload[10].sum);\nlet object_keys_macro = Object.keys(msg.payload[11].sum);\nlet object_keys_inter = Object.keys(msg.payload[12].sum);\n\n//call fucntion to get downtimes in seconds\nlet totaldowntimeSeconds = calcDowntime(object_keys_totaldowtime, msg.payload[9].sum )\nlet total_micro_downtime = calcDowntime(object_keys_micro, msg.payload[10].sum);\nlet total_macro_downtime = calcDowntime(object_keys_macro, msg.payload[11].sum);\nlet total_inter_downtime = calcDowntime(object_keys_inter, msg.payload[12].sum);\n\n// calculate downtime precentages\n\nlet micro_precentage =100* total_micro_downtime/totaldowntimeSeconds;\n\nlet macro_precentage = 100 * total_macro_downtime / totaldowntimeSeconds;\n\nlet inter_precentage = 100 * total_inter_downtime / totaldowntimeSeconds;\n\n\n\n// format total downtime for psql\nlet totaldowntime = `${msg.payload[9].sum.hours} hours ${msg.payload[9].sum.minutes} minutes ${msg.payload[9].sum.seconds} seconds ${msg.payload[9].sum.milliseconds} milliseconds`;\n\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\n\n\nmsg.payload = {\n\n    day : date.toLocaleDateString(),\n    shift_gsph: gsph,\n    avg_eff : shift_eff,\n    current_shift: shift,\n    downtime: totaldowntime,\n    micro : micro_precentage,\n    macro: macro_precentage,\n    inter: inter_precentage\n\n}\n\nreturn msg;\n\nfunction calcEff(arr){\n\n\nlet sum = 0;\nlet keys = [];\nfor (let i = 0; i < arr.length; i++){\n    keys = Object.keys(arr[i])\n    if (keys.includes(\"efficiency\")){\n       sum += arr[i].efficiency;\n\n    }\n}\n\nlet eff = sum/8;\n\nreturn eff;\n\n\n}\n\n\nfunction calcDowntime(keys, time_object){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0; \n    if(keys.includes(\"hours\")){\n        hours = time_object.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = time_object.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = time_object.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n",
+        "func": "let shift_eff = calcEff(msg.payload);\nlet count = msg.payload[0].count;\nlet gsph = Number(count)/ 7.083;\nlet shift = \"\";\nlet date = new Date;\nlet hour = date.getHours();\n\n//get object keys to calculate downtime in seconds\nlet object_keys_totaldowtime = [];\nlet object_keys_micro = []\nlet object_keys_prod = []\nlet object_keys_tool = []\nlet object_keys_main = []\n\nlet totaldowntimeSeconds = 0;\nlet total_micro_downtime = 0;\nlet total_prod_downtime = 0;\nlet total_tool_downtime = 0;\nlet total_main_downtime = 0;\n\n// //call fucntion to get downtimes in seconds\nif ( msg.payload[9].sum)\n{\n     object_keys_totaldowtime = Object.keys(msg.payload[9].sum);\n     totaldowntimeSeconds = calcDowntime(object_keys_totaldowtime, msg.payload[9].sum )\n\n}\nelse totaldowntimeSeconds = 0;\nif ( msg.payload[10].sum != null)\n{\n      object_keys_micro = Object.keys(msg.payload[10].sum);\n     total_micro_downtime = calcDowntime(object_keys_micro, msg.payload[10].sum )\n\n}\nelse total_micro_downtime = 0;\nif ( msg.payload[11].sum != null)\n{\n     object_keys_prod = Object.keys(msg.payload[11].sum);\n\n     total_prod_downtime = calcDowntime(object_keys_prod, msg.payload[11].sum )\n\n}\nelse total_prod_downtime = 0;\nif ( msg.payload[12].sum != null)\n{\n     object_keys_tool = Object.keys(msg.payload[12].sum);\n\n     total_tool_downtime = calcDowntime(object_keys_tool, msg.payload[12].sum )\n\n}\nelse total_tool_downtime = 0;\nif (msg.payload[13].sum != null) {\n    object_keys_main = Object.keys(msg.payload[13].sum);\n\n    total_main_downtime = calcDowntime(object_keys_main, msg.payload[13].sum)\n\n}\nelse total_tool_downtime = 0;\n\n\n// calculate downtime precentages\n\nlet micro_precentage =100* total_micro_downtime/totaldowntimeSeconds;\n\nlet prod_precentage = 100 * total_prod_downtime / totaldowntimeSeconds;\n\nlet tool_precentage = 100 * total_tool_downtime / totaldowntimeSeconds;\n\nlet main_precentage = 100 * total_main_downtime / totaldowntimeSeconds;\n\nlet totaldowntime = convertSeconds(totaldowntimeSeconds);\n\n\n totaldowntime = `${totaldowntime.hours} hours ${totaldowntime.minutes} minutes ${ totaldowntime.seconds} seconds`;\n\n\nif (hour == 13){\n    shift = \"D\";\n\n}\nelse if (hour == 21){\n\n    shift = \"A\";\n}\nelse shift = \"N\";\n\n\n\nmsg.payload = {\n\n    day : date.toLocaleDateString(),\n    shift_gsph: gsph,\n    avg_eff : shift_eff,\n    current_shift: shift,\n    downtime: totaldowntime,\n    micro : micro_precentage,\n    prod: prod_precentage,\n    tool: tool_precentage,\n    main: main_precentage,\n    strokes: count\n\n}\n\nreturn msg;\n\nfunction calcEff(arr){\n\n\nlet sum = 0;\nlet count = 0;\nlet keys = [];\nfor (let i = 0; i < arr.length; i++){\n    keys = Object.keys(arr[i])\n    if (keys.includes(\"efficiency\")){\n       sum += arr[i].efficiency;\n       count ++;\n\n    }\n}\n\nlet eff = sum/count;\n\nreturn eff;\n\n\n}\n\n\nfunction calcDowntime(keys, time_object){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0; \n    if(keys.includes(\"hours\")){\n        hours = time_object.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = time_object.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = time_object.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\nfunction convertSeconds(seconds) {\n    const hours = Math.floor(seconds / 3600);\n    const minutes = Math.floor((seconds % 3600) / 60);\n    const remainingSeconds = seconds % 60;\n\n    return {\n        hours: hours,\n        minutes: minutes,\n        seconds: remainingSeconds\n    };\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 560,
+        "x": 710,
+        "y": 620,
         "wires": [
             [
                 "7269230f2114c527"
@@ -2029,14 +2459,15 @@
         "id": "7269230f2114c527",
         "type": "postgresql",
         "z": "cde9bf556ca805e7",
+        "g": "1c2f3950e9176424",
         "name": "",
-        "query": "INSERT INTO shiftdata(day, gsph, avg_eff, shift, totaldowntime, micro, prod, tool, main)\nVALUES('{{{msg.payload.day}}}', {{{msg.payload.shift_gsph}}}, {{{msg.payload.avg_eff}}}, '{{{msg.payload.current_shift}}}', INTERVAL '{{{msg.payload.downtime}}}', {{{msg.payload.micro}}}, {{{msg.payload.macro}}}, {{{msg.payload.inter}}}, 0 );\n",
+        "query": "INSERT INTO shiftdata(day, gsph, avg_eff, shift, totaldowntime, micro, prod, tool, main, strokes, sync)\nVALUES('{{{msg.payload.day}}}', {{{msg.payload.shift_gsph}}}, {{{msg.payload.avg_eff}}}, '{{{msg.payload.current_shift}}}', INTERVAL '{{{msg.payload.downtime}}}', {{{msg.payload.micro}}}, {{{msg.payload.prod}}}, {{{msg.payload.tool}}}, {{{msg.payload.main}}}, {{{msg.payload.strokes}}}, false );\n",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 790,
-        "y": 560,
+        "x": 950,
+        "y": 620,
         "wires": [
             []
         ]
@@ -2045,6 +2476,7 @@
         "id": "25d73fe8c8300610",
         "type": "inject",
         "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
         "name": "",
         "props": [
             {
@@ -2057,7 +2489,7 @@
         ],
         "repeat": "",
         "crontab": "00 00 * * *",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
@@ -2074,16 +2506,272 @@
         "id": "054115326ae81d82",
         "type": "function",
         "z": "cde9bf556ca805e7",
-        "name": "function 10",
-        "func": "let date = new Date;\nlet day = date.toLocaleDateString();\n\n\n\nglobal.set('current_day' , day)\n",
+        "g": "cecc316482bdd50a",
+        "name": "Set current day",
+        "func": "let date = new Date;\nlet day = date.toLocaleDateString();\n\nglobal.set('current_day' , day)\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 320,
         "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "408092bbaad8ae97",
+        "type": "link out",
+        "z": "cde9bf556ca805e7",
+        "g": "cecc316482bdd50a",
+        "name": "(Shift Efficiency FB) active shift out",
+        "mode": "link",
+        "links": [
+            "7535129e7d4b8459"
+        ],
+        "x": 565,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "866bd2700507b58f",
+        "type": "inject",
+        "z": "cde9bf556ca805e7",
+        "g": "4d8505f3f2f63a2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "ec42a1e614c56b04"
+            ]
+        ]
+    },
+    {
+        "id": "ec42a1e614c56b04",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "g": "4d8505f3f2f63a2b",
+        "name": "Set variables",
+        "func": "\nfunction getShiftHour(date) {\n    const now = date;\n    const startHour = 5; // Starting hour\n    const startMinute = 45; // Starting minute\n\n    // Calculate the total minutes from midnight to the current time\n    const totalMinutes = now.getHours() * 60 + now.getMinutes();\n\n\n    // Calculate the total minutes from midnight to the start time\n    const startTotalMinutes = startHour * 60 + startMinute;\n\n    // Calculate the difference in minutes\n    const diffMinutes = totalMinutes - startTotalMinutes;\n\n    // Calculate the shift hour, repeating every 8 hours\n    const shiftHour = ((Math.floor(diffMinutes / 60) % 8) + 1);\n\n    return shiftHour;\n}\n\n\n\n\n\n\nfunction getActiveShift(date) {\n    const now = date;\n    const hours = now.getHours();\n    const minutes = now.getMinutes();\n    const totalMinutes = hours * 60 + minutes;\n\n    const shiftDStart = 5 * 60 + 45; // 5:45 AM in minutes\n    const shiftDEnd = 13 * 60 + 45;  // 1:45 PM in minutes\n    const shiftAStart = 13 * 60 + 45; // 1:45 PM in minutes\n    const shiftAEnd = 21 * 60 + 45;  // 9:45 PM in minutes\n\n\n    let activeShift;\n\n    if (totalMinutes >= shiftDStart && totalMinutes < shiftDEnd) {\n        activeShift = 'D';\n    } else if (totalMinutes >= shiftAStart && totalMinutes < shiftAEnd) {\n        activeShift = 'A';\n    } else {\n        activeShift = 'N';\n    }\n\n    return activeShift;\n}\n\n\nconst date = new Date;\nconst day = date.toLocaleDateString();\nconst shiftHour = getShiftHour(date);\nconst activeShift = getActiveShift(date);\n\nglobal.set('current_day', day)\n\nglobal.set('active_shift', activeShift);\n\n\nglobal.set('active_shift_hour', shiftHour);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1519f5d014ee4d9",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "g": "4d8505f3f2f63a2b",
+        "name": "Initialize active shift, shift hour and day",
+        "info": "",
+        "x": 210,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "6dea0d8a3444b841",
+        "type": "cronplus",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "0 0 1 * *",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 120,
+        "y": 920,
+        "wires": [
+            [
+                "f8d83ad2daca3597"
+            ]
+        ]
+    },
+    {
+        "id": "f8d83ad2daca3597",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 27",
+        "func": "let date = new Date;\nlet month = date.getMonth() + 1;\nlet year = date.getFullYear();\nlet last_month = 0;\nif (month ==1)\n{\n    last_month = 12;\n    year -=1;\n}else last_month = month - 1;\n\nmsg.payload = {\n    year : year,\n    month: last_month\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 920,
+        "wires": [
+            [
+                "8a9240dba05e54a8"
+            ]
+        ]
+    },
+    {
+        "id": "8a9240dba05e54a8",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "-- SELECT *\n-- FROM shiftdata\n-- WHERE EXTRACT(YEAR FROM day) = 2024\n--   AND EXTRACT(MONTH FROM day) = 8 ;\n\nCOPY shiftdata TO '/home/controls-orin-1/Desktop/p04_monthly_data.csv' WITH (FORMAT CSV, HEADER);\n-- WHERE EXTRACT(YEAR FROM day) = 2024\n--   AND EXTRACT(MONTH FROM day) = 8 ;\n",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 550,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d432d8c89a66e6b1",
+        "type": "comment",
+        "z": "cde9bf556ca805e7",
+        "name": "writes shift data to csv file on desktop every month",
+        "info": "",
+        "x": 270,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "b88e0274f6723f7a",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "SELECT * FROM  shiftdata where SYNC = true and shift = 'D'\nORDER BY DAY asc;",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 330,
+        "y": 980,
+        "wires": [
+            [
+                "54c79dd29ea78b62"
+            ]
+        ]
+    },
+    {
+        "id": "54c79dd29ea78b62",
+        "type": "function",
+        "z": "cde9bf556ca805e7",
+        "name": "function 28",
+        "func": "let eff_arr = calAvgEff(msg.payload);\nlet avg_eff = eff_arr[0].toFixed(1);\nlet avg_gsph = eff_arr[1].toFixed(1);\n\nlet startday = msg.payload[0].day\nstartday = startday.toLocaleDateString();\nlet endday = msg.payload[msg.payload.length-1].day\nendday = endday.toLocaleDateString();\n\nlet totaldowntime = eff_arr[2];\n\nlet hours = Math.floor(totaldowntime / 3600);\ntotaldowntime %= 3600;\nlet minutes = Math.floor(totaldowntime / 60);\nlet seconds = totaldowntime % 60;\n\ntotaldowntime = `${hours} hours ${minutes} minutes ${seconds} seconds `;\n\nmsg.payload = \"Press 04 average KPIs\" + \"\\n\" + \"FROM \" + startday + \" to \" + endday + \"\\n\" + \" GSPH: \" + avg_gsph + \"\\n\" + \" Average efficiency: \"+ avg_eff + \"\\n\" + \" Total downtime: \" + totaldowntime;\nreturn msg;\n\n\nfunction calAvgEff(arr){\n    let sum_eff =0;\n    let sum_gsph = 0;\n    let len = arr.length;\n    let object_keys = [];\n    let totaldowntime = 0;\n    for (let i =0 ; i < len; i++ ){\n        sum_eff += arr[i].avg_eff;\n        sum_gsph += arr[i].gsph;\n         object_keys = Object.keys(arr[i].totaldowntime);\n        totaldowntime += calcDowntime(object_keys, arr[i].totaldowntime )\n    }\n\n    let avg_eff = sum_eff/len;\n    let avg_gsph = sum_gsph/len;\n\n    return [avg_eff, avg_gsph,totaldowntime];\n}\n\n\nfunction calcDowntime(keys, time_object){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0; \n    if(keys.includes(\"hours\")){\n        hours = time_object.hours;\n    }else hours = 0;\n\n    if(keys.includes(\"minutes\")){\n        mins = time_object.minutes;\n    }else mins = 0;\n\n    if (keys.includes(\"seconds\")){\n        secs = time_object.seconds ;\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 980,
+        "wires": [
+            [
+                "27e034041fe428ca",
+                "5b6f91b05e22b28d"
+            ]
+        ]
+    },
+    {
+        "id": "27e034041fe428ca",
+        "type": "e-mail",
+        "z": "cde9bf556ca805e7",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "akaash.mahal@martinrea.com",
+        "dname": "",
+        "x": 830,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "d4dbb0c4891d9960",
+        "type": "inject",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 00 * * 1",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 980,
+        "wires": [
+            [
+                "b88e0274f6723f7a"
+            ]
+        ]
+    },
+    {
+        "id": "5b6f91b05e22b28d",
+        "type": "postgresql",
+        "z": "cde9bf556ca805e7",
+        "name": "",
+        "query": "",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 770,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -2098,7 +2786,7 @@
             "a4d4a07606b95a9c"
         ],
         "x": 75,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "3ae92b49f2a7e593"
@@ -2116,8 +2804,8 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 1300,
-        "y": 140,
+        "x": 1230,
+        "y": 120,
         "wires": [
             []
         ]
@@ -2128,18 +2816,21 @@
         "z": "c6238f4648e04a71",
         "g": "0d79cd42d33b5425",
         "name": "Downtime logic",
-        "func": "if (context.get('downtime_started') == undefined){\n    context.set('downtime_started', false);\n}\n\n\nif (!flow.get('p04_production_state') && !context.get('downtime_started')){\n    let date = new Date;\n    date.setSeconds(date.getSeconds() - 30);    \n    let str = date.toISOString();\n    context.set('startdate', str);\n    context.set('downtime_started', true)\n    \n}\n\nif(flow.get('p04_production_state') && context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    context.set('downtime_started', false);\n\n    return msg;\n    \n}\n\n\nif (msg.payload == \"END OF SHIFT\" && context.get('downtime_started')){\n\n    let date = new Date;\n    let str = date.toISOString();\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    context.set('startdate', str);\n\n    return msg;\n\n\n\n}\n\n\n\n\n",
-        "outputs": 1,
+        "func": "\nif (context.get('downtime_started') == undefined){\n    context.set('downtime_started', false);\n}\n\n\nif (!flow.get('p04_production_state') && !context.get('downtime_started')){\n    let date = new Date;\n    date.setSeconds(date.getSeconds() - 30);    \n    let str = date.toISOString();\n    context.set('startdate', str);\n    flow.set('downtime_startTime', date);\n    context.set('downtime_started', true)\n    msg.payload = \"START\";\n\n    return [null,msg]\n    \n}\n\nif(flow.get('p04_production_state') && context.get('downtime_started')){\n    let date = new Date;\n    let str = date.toISOString();\n    let resetMsg = {}\n    resetMsg.payload = \"STOP\";\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n\n    context.set('downtime_started', false);\n    \n\n    return [msg, resetMsg];\n    \n}\n\n\nif (msg.payload == \"END OF SHIFT\" && context.get('downtime_started')){\n\n    let date = new Date;\n    let str = date.toISOString();\n    // let resetMsg = {\n    //     payload : \"START\"\n    // };\n    let resetMsg = {}\n    resetMsg.payload = \"START\";\n    msg.payload = {\n        startdate: context.get('startdate'),\n        enddate: str\n    }\n    \n    context.set('startdate', str);\n\n    return [msg, resetMsg];\n}\n\n\n\n\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1090,
-        "y": 140,
+        "x": 1020,
+        "y": 160,
         "wires": [
             [
                 "64ec4cb0f059f48d"
+            ],
+            [
+                "599210bd09f4dff8"
             ]
         ]
     },
@@ -2167,7 +2858,7 @@
         "outputReceivedMessageOnTimerHalt": false,
         "startTimerOnReceivalOfUnknownMessage": true,
         "resetTimerOnReceivalOfUnknownMessage": true,
-        "resetTimerOnReceivalOfStartAction": false,
+        "resetTimerOnReceivalOfStartAction": true,
         "continueTimerOnReceivalOfStartAction": false,
         "isDebugModeEnabled": false,
         "timerTriggeredMessageType": "str",
@@ -2191,34 +2882,13 @@
         "pauseActionName": "PAUSE",
         "continueActionNameType": "str",
         "continueActionName": "CONTINUE",
-        "x": 510,
-        "y": 140,
+        "x": 500,
+        "y": 160,
         "wires": [
             [
                 "201ff3d15d08dccc"
             ],
             []
-        ]
-    },
-    {
-        "id": "ec1e2775b20959bb",
-        "type": "function",
-        "z": "c6238f4648e04a71",
-        "g": "0d79cd42d33b5425",
-        "name": "Check Press State",
-        "func": "\n\nflow.set('p04_production_state', true);\nmsg.payload = flow.get('p04_production_state');\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 80,
-        "wires": [
-            [
-                "c20a1b4d9b50dc8d"
-            ]
         ]
     },
     {
@@ -2241,8 +2911,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 140,
+        "x": 750,
+        "y": 160,
         "wires": [
             [
                 "f726fb9bd416c0c6"
@@ -2276,8 +2946,8 @@
                 "solarEvents": "sunrise,sunset"
             }
         ],
-        "x": 530,
-        "y": 200,
+        "x": 500,
+        "y": 220,
         "wires": [
             [
                 "022310190439f221"
@@ -2290,7 +2960,7 @@
         "z": "c6238f4648e04a71",
         "g": "0d79cd42d33b5425",
         "name": "Check if Press idle",
-        "func": "if (context.get('last_angle') == undefined){\n\n    context.set('last_angle', 0);\n\n\n\n}\n\n\nif (msg.payload != context.get('last_angle'))\n{\n    context.set('last_angle', msg.payload);\n    return msg;\n}",
+        "func": "if (context.get('last_angle') == undefined){\n\n    context.set('last_angle', 0);\n\n\n\n}\n\n\nif (msg.payload != context.get('last_angle'))\n{\n    context.set('last_angle', msg.payload);\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2298,118 +2968,152 @@
         "finalize": "",
         "libs": [],
         "x": 220,
-        "y": 140,
+        "y": 160,
         "wires": [
             [
                 "52e8254bf2427aa5",
-                "ec1e2775b20959bb"
+                "796450a50c5f5093"
             ]
         ]
     },
     {
-        "id": "a3bc6ba5cd691287",
+        "id": "599210bd09f4dff8",
+        "type": "controltimer",
+        "z": "c6238f4648e04a71",
+        "g": "0d79cd42d33b5425",
+        "name": "",
+        "timerType": "delay",
+        "timerDurationUnit": "minute",
+        "timerDurationType": "num",
+        "timerDuration": 3,
+        "timerLoopTimeoutUnit": "second",
+        "timerLoopTimeoutType": "num",
+        "timerLoopTimeout": 0,
+        "loopTimeoutMessageType": "str",
+        "loopTimeoutMessage": "LOOP_TIMEOUT",
+        "timerMaxLoopIterationsType": "num",
+        "timerMaxLoopIterations": 0,
+        "loopMaxIterationsMessageType": "str",
+        "loopMaxIterationsMessage": "MAX_LOOP_ITERATIONS",
+        "isRunningTimerProgressVisible": true,
+        "outputReceivedMessageOnTimerTrigger": true,
+        "outputReceivedMessageOnTimerHalt": false,
+        "startTimerOnReceivalOfUnknownMessage": true,
+        "resetTimerOnReceivalOfUnknownMessage": false,
+        "resetTimerOnReceivalOfStartAction": true,
+        "continueTimerOnReceivalOfStartAction": false,
+        "isDebugModeEnabled": false,
+        "timerTriggeredMessageType": "str",
+        "timerTriggeredMessage": "TIMER_TRIGGERED",
+        "timerHaltedMessageType": "str",
+        "timerHaltedMessage": "TIMER_HALTED",
+        "isStartActionEnabled": true,
+        "isStopActionEnabled": true,
+        "isResetActionEnabled": true,
+        "isPauseActionEnabled": true,
+        "isContinueActionEnabled": true,
+        "actionPropertyNameType": "str",
+        "actionPropertyName": "payload",
+        "startActionNameType": "str",
+        "startActionName": "START",
+        "stopActionNameType": "str",
+        "stopActionName": "STOP",
+        "resetActionNameType": "str",
+        "resetActionName": "RESET",
+        "pauseActionNameType": "str",
+        "pauseActionName": "PAUSE",
+        "continueActionNameType": "str",
+        "continueActionName": "CONTINUE",
+        "x": 1240,
+        "y": 200,
+        "wires": [
+            [
+                "fd068044b1fc631d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fd068044b1fc631d",
+        "type": "link out",
+        "z": "c6238f4648e04a71",
+        "g": "0d79cd42d33b5425",
+        "name": "(Downtime FB) Interlock Signal OUT",
+        "mode": "link",
+        "links": [
+            "72f92dcd49da8dce"
+        ],
+        "x": 1355,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "72f92dcd49da8dce",
+        "type": "link in",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "(Downtime FB) Interlock Signal IN",
+        "links": [
+            "fd068044b1fc631d"
+        ],
+        "x": 75,
+        "y": 360,
+        "wires": [
+            [
+                "37078546cc620973",
+                "3b1330e7a3c5e2fc"
+            ]
+        ]
+    },
+    {
+        "id": "37078546cc620973",
         "type": "function",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "Writes Downtime bucket",
-        "func": "let object_keys = Object.keys(msg.payload[0].downtime);\n\n\nlet totaldowntime  = calcDowntime(object_keys)\n\nif (totaldowntime < 60){\n    msg.payload = {\n        id : msg.payload[0].id,\n        bucket : \"Micro\"\n\n    }\n    return [msg,];\n} else if (totaldowntime < 180) {\n       msg.payload = {\n        id : msg.payload[0].id,\n        bucket : \"Macro\"\n\n    }\n      return [msg,];\n}else {\n\n    flow.set('active_downtime_id', msg.payload[0].id)\n       msg.payload = {\n        \"tab\" : \"Downtime\"\n    }\n    return [, msg];\n}\n\n\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[0].downtime.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[0].downtime.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[0].downtime.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n",
+        "g": "da8866099255dcf8",
+        "name": "Interlock press",
+        "func": "let display_message = {};\nflow.set('downtime_recorded', false);\n\n// interlock press here\n// \n//\n\n  display_message.payload = \"PRESS INTERLOCKED, PLEASE ENTER REASON FOR DOWNTIME TO START RUNNING IN CONTINUOUS MODE\";\n\nmsg.payload = {\n  \"tabs\": {\n    \"hide\": [\n      \"Overview\",\n      \"KPI Tracker\"\n    ],\n    \"show\" : \"Downtime\",\n    \"disable\": [\n      \"Overview\",\n      \"KPI Tracker\"\n    ],\n    \"enable\" : \"Downtime\",\n    \"tab\" : \"Downtime\"\n  },\n  \"tab\" : \"Downtime\"\n}\n\n\nreturn [msg, display_message];\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 380,
+        "x": 260,
+        "y": 360,
         "wires": [
             [
-                "eb2b80a4e3c090b6"
+                "1a2c750dfaefbf52"
             ],
             [
-                "7f4942862ff2ad94",
-                "cc85bbb25b00ce20"
+                "a70d0bea5e80e440"
             ]
         ]
     },
     {
-        "id": "9d837efc61b8a394",
-        "type": "complete",
+        "id": "1a2c750dfaefbf52",
+        "type": "ui_ui_control",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
+        "g": "da8866099255dcf8",
         "name": "",
-        "scope": [
-            "64ec4cb0f059f48d"
-        ],
-        "uncaught": false,
-        "x": 140,
-        "y": 380,
-        "wires": [
-            [
-                "53f505871afe2eb8"
-            ]
-        ]
-    },
-    {
-        "id": "53f505871afe2eb8",
-        "type": "postgresql",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "",
-        "query": "select downtime, id from downtime \nORDER BY ID DESC\nLIMIT 1;",
-        "postgreSQLConfig": "6034ba1e7c15fb9e",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 360,
-        "y": 380,
-        "wires": [
-            [
-                "a3bc6ba5cd691287"
-            ]
-        ]
-    },
-    {
-        "id": "eb2b80a4e3c090b6",
-        "type": "postgresql",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "",
-        "query": "UPDATE downtime\nSET bucket = '{{{msg.payload.bucket}}}'\nWHERE id = {{{msg.payload.id}}};",
-        "postgreSQLConfig": "6034ba1e7c15fb9e",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 970,
+        "events": "connect",
+        "x": 520,
         "y": 340,
         "wires": [
             []
         ]
     },
     {
-        "id": "7f4942862ff2ad94",
-        "type": "ui_ui_control",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "",
-        "events": "connect",
-        "x": 960,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fdfbb552c972b1cb",
+        "id": "b8656acce0e39733",
         "type": "ui_dropdown",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "",
+        "g": "da8866099255dcf8",
+        "name": "DT bucket",
         "label": "",
         "tooltip": "",
         "place": "Select option",
         "group": "2e55cdce086fb22b",
-        "order": 5,
-        "width": 14,
+        "order": 7,
+        "width": 18,
         "height": 1,
         "passthru": true,
         "multiple": false,
@@ -2440,89 +3144,114 @@
         "topicType": "msg",
         "className": "",
         "x": 130,
-        "y": 620,
+        "y": 580,
         "wires": [
             [
-                "74fe7c212aef62e6",
-                "22d0b0f1d4790945"
+                "34f28e78f1114741"
             ]
         ]
     },
     {
-        "id": "b3c61293c31ae4d3",
-        "type": "ui_text",
+        "id": "a69362160a832614",
+        "type": "comment",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "group": "2e55cdce086fb22b",
-        "order": 1,
-        "width": 14,
-        "height": 1,
-        "name": "",
-        "label": "Selected Downtime",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "24",
-        "color": "#000000",
-        "x": 540,
-        "y": 620,
+        "g": "da8866099255dcf8",
+        "name": "Downtime form",
+        "info": "",
+        "x": 140,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "74fe7c212aef62e6",
-        "type": "function",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "function 19",
-        "func": "if (msg.payload == \"tool\")\n{\n    msg.payload = \"Tool Room\";\n}\nelse if (msg.payload == \"main\"){\n    msg.payload = \"Maintenance\";\n}\nelse{\n    msg.payload = \"Production\"\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 620,
-        "wires": [
-            [
-                "b3c61293c31ae4d3"
-            ]
-        ]
-    },
-    {
-        "id": "e439239f5f08e84a",
-        "type": "ui_text",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "group": "2e55cdce086fb22b",
-        "order": 18,
-        "width": 16,
-        "height": 2,
-        "name": "Message",
-        "label": "Note:",
-        "format": "Press will be interlocked in 5 mins if no dowtime is selected",
-        "layout": "row-left",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "24",
-        "color": "#000000",
-        "x": 130,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "22d0b0f1d4790945",
+        "id": "34f28e78f1114741",
         "type": "change",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
+        "g": "da8866099255dcf8",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "selected_dt",
+                "p": "selected_dt_bucket",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50207457c2352102",
+        "type": "ui_text_input",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "Comments",
+        "label": "Comments",
+        "tooltip": "",
+        "group": "2e55cdce086fb22b",
+        "order": 11,
+        "width": 18,
+        "height": 1,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "5078af9d4958a46f"
+            ]
+        ]
+    },
+    {
+        "id": "24d15b5bed03ff8d",
+        "type": "ui_text_input",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "",
+        "label": "Employee ID",
+        "tooltip": "",
+        "group": "2e55cdce086fb22b",
+        "order": 15,
+        "width": 18,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "0fee5624c8b9f85a"
+            ]
+        ]
+    },
+    {
+        "id": "5078af9d4958a46f",
+        "type": "change",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dt_comments",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -2534,44 +3263,73 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 660,
+        "y": 640,
         "wires": [
             []
         ]
     },
     {
-        "id": "8ea8de551bb969aa",
+        "id": "0fee5624c8b9f85a",
+        "type": "change",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "emp_id",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6e847f3b9e15ab3",
         "type": "function",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "function 20",
-        "func": " let dt_bucket = flow.get('selected_dt');\n \n  msg.payload = {id : flow.get('active_downtime_id'),\n        bucket : dt_bucket};\n\n\nreturn msg;",
-        "outputs": 1,
+        "g": "da8866099255dcf8",
+        "name": "Check form",
+        "func": "let notification = {};\nif (!flow.get('selected_dt_bucket') || !flow.get('dt_comments') || !flow.get('emp_id')){\n\n msg.payload = \"Please fill in all required boxes\";\n\n return [,msg];\n\n}\nelse if (flow.get('dt_comments').length > 255){\n\n    msg.payload = \"Comments exceed 255 characters, please shorten.\"\n\n     return [,msg];\n}\nelse{\n\n    // allow press to run in continuous again\n    \n    // msg.payload = {\n    //     selected_dt : flow.get('selected_dt_bucket'),\n    //     comments : flow.get('dt_comments'),\n    //     emp_id : flow.get('emp_id')\n    // };\n\n    msg.payload ={\n   \n    \"tabs\": {\n        \"show\": [\n            \"Overview\",\n            \"KPI Tracker\"\n        ],\n        \"hide\": [\n            \"Downtime\"\n        ],\n        \"enable\": [\n            \"Overview\",\n            \"KPI Tracker\"\n        ],\n        \"disable\": [\n            \"Downtime\"\n        ]\n    },\n     \"tab\": \"Overview\"\n};\n\n    \n\n    notification.payload = \"Downtime Form Completed, press now able to run in continuous\" ;\n\n\n    return [msg, notification]\n    \n}\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 720,
+        "x": 770,
+        "y": 520,
         "wires": [
             [
-                "1e71d00ae7166a6e"
+                "191da693cfff1acb"
+            ],
+            [
+                "247e2a805d733a99"
             ]
         ]
     },
     {
-        "id": "fc9d260557c20734",
+        "id": "ad34b5293b862921",
         "type": "ui_button",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
+        "g": "da8866099255dcf8",
         "name": "",
         "group": "2e55cdce086fb22b",
-        "order": 3,
+        "order": 18,
         "width": 8,
         "height": 1,
         "passthru": false,
-        "label": "COMPLETE",
+        "label": "SUBMIT",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2581,232 +3339,272 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 140,
-        "y": 720,
+        "x": 600,
+        "y": 520,
         "wires": [
             [
-                "8ea8de551bb969aa"
+                "d6e847f3b9e15ab3"
             ]
         ]
     },
     {
-        "id": "1e71d00ae7166a6e",
+        "id": "247e2a805d733a99",
+        "type": "ui_toast",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 970,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3b508a1694a833e",
+        "type": "complete",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "",
+        "scope": [
+            "64ec4cb0f059f48d"
+        ],
+        "uncaught": false,
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "3f35ca8741b68f60"
+            ]
+        ]
+    },
+    {
+        "id": "3f35ca8741b68f60",
         "type": "postgresql",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
+        "g": "da8866099255dcf8",
+        "name": "",
+        "query": "select downtime, id from downtime \nORDER BY ID DESC\nLIMIT 1;",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 350,
+        "y": 760,
+        "wires": [
+            [
+                "17131fa7e3fb474d"
+            ]
+        ]
+    },
+    {
+        "id": "17131fa7e3fb474d",
+        "type": "function",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "Writes Downtime bucket",
+        "func": "let object_keys = Object.keys(msg.payload[0].downtime);\n\n\nlet totaldowntime  = calcDowntime(object_keys)\n\n if (totaldowntime < 180) {\n       msg.payload = {\n        id : msg.payload[0].id,\n        bucket : \"Micro\"\n\n    }\n      return msg;\n}else {\n\n    \n    msg.payload = {\n        id : msg.payload[0].id,\n        bucket : flow.get('selected_dt_bucket'),\n        comments : flow.get('dt_comments'),\n        emp_id : flow.get('emp_id')\n\n    }\n/*uncomment after interlocking is put in place\n    flow.set('selected_dt_bucket', null);\n    flow.set('dt_comments', null);\n    flow.set('emp_id', null);\n    */\n    return msg;\n}\n\n\n\n\n\n\nfunction calcDowntime(keys){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0;\n    if(keys.includes(\"hours\")){\n        hours = msg.payload[0].downtime.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = msg.payload[0].downtime.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = msg.payload[0].downtime.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n\n\n\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 760,
+        "wires": [
+            [
+                "6ca019655950d7db"
+            ]
+        ]
+    },
+    {
+        "id": "6ca019655950d7db",
+        "type": "postgresql",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
         "name": "",
         "query": "UPDATE downtime\nSET bucket = '{{{msg.payload.bucket}}}'\nWHERE id = {{{msg.payload.id}}};",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 560,
-        "y": 720,
+        "x": 970,
+        "y": 760,
         "wires": [
             []
         ]
     },
     {
-        "id": "4b843b224dd4316b",
-        "type": "link in",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "(Downtime FB) Downtime trigger link in",
-        "links": [
-            "cc85bbb25b00ce20"
-        ],
-        "x": 115,
-        "y": 540,
-        "wires": [
-            [
-                "e96a41c2a963ddb0"
-            ]
-        ]
-    },
-    {
-        "id": "e96a41c2a963ddb0",
-        "type": "function",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "function 21",
-        "func": "msg.payload = flow.get('active_downtime_id');\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 540,
-        "wires": [
-            [
-                "d0e8dfb55b829d85"
-            ]
-        ]
-    },
-    {
-        "id": "d0e8dfb55b829d85",
-        "type": "postgresql",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "",
-        "query": "select startdate, enddate from downtime where id = {{{msg.payload}}};",
-        "postgreSQLConfig": "6034ba1e7c15fb9e",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 460,
-        "y": 540,
-        "wires": [
-            [
-                "47cf9385514594f3"
-            ]
-        ]
-    },
-    {
-        "id": "9895f6d23adef407",
+        "id": "191da693cfff1acb",
         "type": "ui_ui_control",
         "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
         "name": "",
-        "events": "connect",
-        "x": 200,
+        "events": "all",
+        "x": 960,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5ec8c0dc5cb83b0",
+        "type": "ui_text",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "group": "2e55cdce086fb22b",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "Reason for Downtime:",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "24",
+        "color": "#000000",
+        "x": 130,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a70d0bea5e80e440",
+        "type": "ui_toast",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 530,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd5b22e8af38f18b",
+        "type": "inject",
+        "z": "c6238f4648e04a71",
+        "g": "da8866099255dcf8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"tabs\":{\"disable\":\"Downtime\",\"hide\":\"Downtime\"}}",
+        "payloadType": "json",
+        "x": 130,
         "y": 820,
         "wires": [
             [
-                "147f5dc5aa011ef3"
+                "669ff6c6bcf3df5c"
             ]
         ]
     },
     {
-        "id": "147f5dc5aa011ef3",
-        "type": "debug",
+        "id": "669ff6c6bcf3df5c",
+        "type": "ui_ui_control",
         "z": "c6238f4648e04a71",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
+        "g": "da8866099255dcf8",
+        "name": "",
+        "events": "all",
+        "x": 340,
         "y": 820,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "cc85bbb25b00ce20",
-        "type": "link out",
-        "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "(Downtime FB) Downtime tab trigger link out",
-        "mode": "link",
-        "links": [
-            "4b843b224dd4316b"
-        ],
-        "x": 915,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "47cf9385514594f3",
+        "id": "3b1330e7a3c5e2fc",
         "type": "function",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
-        "name": "function 22",
-        "func": "let startdate =convertToLocalDate(msg.payload[0].startdate);\nlet enddate = convertToLocalDate(msg.payload[0].enddate);\n\nmsg.payload = {\n    start: startdate,\n    end: enddate\n};\n\nreturn msg;\n\n\nfunction convertToLocalDate(timestamp){\n    let date = new Date(timestamp);\n\n    // Extract local date and time components\n    let localDate = date.toLocaleDateString();\n    let localTime = date.toLocaleTimeString();\n\n    // Format the local date and time into a single string\n    let localDateTime = localDate + ' ' + localTime;\n\n\n    return localDateTime;\n}",
+        "g": "da8866099255dcf8",
+        "name": "Display downtime start time",
+        "func": "\nlet date = flow.get('downtime_startTime');\nlet dateString = date.toLocaleDateString();\nlet timeString = date.toLocaleTimeString();\nlet downtimeStart = dateString + \" \" + timeString;\n\nmsg.payload = downtimeStart;\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 540,
+        "x": 300,
+        "y": 420,
         "wires": [
             [
-                "c6c8df1c184a16fe"
+                "e9b293416086d130"
             ]
         ]
     },
     {
-        "id": "c6c8df1c184a16fe",
+        "id": "e9b293416086d130",
         "type": "ui_text",
         "z": "c6238f4648e04a71",
-        "g": "3d2567dd0bca9512",
+        "g": "da8866099255dcf8",
         "group": "2e55cdce086fb22b",
-        "order": 11,
-        "width": 18,
+        "order": 23,
+        "width": 20,
         "height": 1,
         "name": "",
-        "label": "Please enter reason for downtime for:",
-        "format": "{{msg.payload.start}} to {{msg.payload.end}}",
+        "label": "Downtime Started: ",
+        "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
         "style": true,
         "font": "",
         "fontSize": "24",
         "color": "#000000",
-        "x": 970,
-        "y": 540,
+        "x": 550,
+        "y": 420,
         "wires": []
     },
     {
-        "id": "c952ec604a71349b",
-        "type": "inject",
+        "id": "796450a50c5f5093",
+        "type": "function",
         "z": "c6238f4648e04a71",
         "g": "0d79cd42d33b5425",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 280,
-        "y": 80,
+        "name": "check press state",
+        "func": "flow.set('p04_production_state', true);\nmsg.payload = flow.get('p04_production_state');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 100,
         "wires": [
             [
-                "52e8254bf2427aa5",
-                "ec1e2775b20959bb"
-            ]
-        ]
-    },
-    {
-        "id": "700bea46e1c5c386",
-        "type": "inject",
-        "z": "c6238f4648e04a71",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 240,
-        "y": 320,
-        "wires": [
-            [
-                "53f505871afe2eb8"
+                "c20a1b4d9b50dc8d"
             ]
         ]
     },
@@ -2814,20 +3612,23 @@
         "id": "d4f9970e9026b2ec",
         "type": "function",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
-        "name": "function 8",
-        "func": "let shift_hour = global.get('active_shift_hour')-1;\nlet strokes = Number(msg.payload[0].count);\nflow.set( \"parts_per_hour\" + \"[\" + shift_hour +  \"]\"  ,strokes );\nlet parts_per_hour = flow.get(\"parts_per_hour\");\nlet time_intervals = [];\n\n\nif (global.get('active_shift') == \"D\"){\n\n    time_intervals = [\"5:45-6:45\", \"6:45-7:45\", \"7:45-8:45\", \"8:45-9:45\", \"9:45-10:45\", \"10:45-11:45\", \"11:45-12:45\", \"12:45-13:45\"];\n}else if (global.get('active_shift') == \"A\"){\n    time_intervals = [\"13:45-14:45\", \"14:45-15:45\", \"15:45-16:45\", \"16:45-17:45\", \"17:45-18:45\", \"18:45-19:45\", \"19:45-20:45\", \"20:45-21:45\"];\n\n}\nelse{\n    time_intervals = [\"21:45-22:45\", \"22:45-23:45\", \"23:45-00:45\", \"00:45-01:45\", \"01:45-02:45\", \"02:45-03:45\", \"03:45-04:45\", \"04:45-05:45\"];\n\n}\n\nmsg.payload = [{\n    series: [\"Parts per hour\"],\n    data: [[parts_per_hour[0], parts_per_hour[1], parts_per_hour[2], parts_per_hour[3], parts_per_hour[4], parts_per_hour[5], parts_per_hour[6], parts_per_hour[7]]],\n    labels: time_intervals\n}];\nreturn msg;\n\n",
-        "outputs": 1,
+        "g": "9a4eb149e6945c58",
+        "name": "display graph",
+        "func": "let shift_hour = global.get('active_shift_hour')-1;\nlet strokes = Number(msg.payload[0].count);\nflow.set( \"parts_per_hour\" + \"[\" + shift_hour +  \"]\"  ,strokes );\nlet parts_per_hour = flow.get(\"parts_per_hour\");\nlet time_intervals = [];\nlet delta = {};\nlet pph_values = flow.get('pph_targets_arr'); \n\n\nif (global.get('active_shift') == \"D\"){\n\n    time_intervals = [\"5:45-6:45\", \"6:45-7:45\", \"7:45-8:45\", \"8:45-9:45\", \"9:45-10:45\", \"10:45-11:45\", \"11:45-12:45\", \"12:45-13:45\"];\n}else if (global.get('active_shift') == \"A\"){\n    time_intervals = [\"13:45-14:45\", \"14:45-15:45\", \"15:45-16:45\", \"16:45-17:45\", \"17:45-18:45\", \"18:45-19:45\", \"19:45-20:45\", \"20:45-21:45\"];\n\n}\nelse{\n    time_intervals = [\"21:45-22:45\", \"22:45-23:45\", \"23:45-00:45\", \"00:45-01:45\", \"01:45-02:45\", \"02:45-03:45\", \"03:45-04:45\", \"04:45-05:45\"];\n}\n\nmsg.payload = [{\n    series: [\"Parts per hour\"],\n    data: [[parts_per_hour[0], parts_per_hour[1], parts_per_hour[2], parts_per_hour[3], parts_per_hour[4], parts_per_hour[5], parts_per_hour[6], parts_per_hour[7]]],\n    labels: time_intervals\n}];\n\n\n\nlet colors = []\nfor ( let i =0; i < parts_per_hour.length; i++){\n    if ((parts_per_hour[i] - pph_values[i].pph) < 0){\n        colors[i] = \"Red\"\n\n    }\n    else colors[i] = \"green\";\n\n}\n\n\ndelta.payload = {\n    hour_1: parts_per_hour[0] - pph_values[0].pph,\n    hour_1_color: colors[0],\n    hour_2: parts_per_hour[1] - pph_values[1].pph,\n    hour_2_color: colors[1],\n    hour_3: parts_per_hour[2] - pph_values[2].pph,\n    hour_3_color: colors[2],\n    hour_4: parts_per_hour[3] - pph_values[3].pph,\n    hour_4_color: colors[3],\n    hour_5: parts_per_hour[4] - pph_values[4].pph,\n    hour_5_color: colors[4],\n    hour_6: parts_per_hour[5] - pph_values[5].pph,\n    hour_6_color: colors[5],\n    hour_7: parts_per_hour[6] - pph_values[6].pph,\n    hour_7_color: colors[6],\n    hour_8: parts_per_hour[7] - pph_values[7].pph,\n    hour_8_color: colors[7]\n}\n\nreturn [msg, delta];\n",
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 160,
+        "x": 690,
+        "y": 260,
         "wires": [
             [
                 "d3db2d9b1d01712b"
+            ],
+            [
+                "0507e7d8b09f9606"
             ]
         ]
     },
@@ -2835,7 +3636,7 @@
         "id": "25fbb845b46918be",
         "type": "inject",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "",
         "props": [
             {
@@ -2854,7 +3655,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 150,
-        "y": 160,
+        "y": 280,
         "wires": [
             [
                 "35465b3555d4ec49"
@@ -2865,15 +3666,15 @@
         "id": "c0b36442ce7578ee",
         "type": "postgresql",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "",
         "query": "SELECT count(*)\nFROM strokedata\nWHERE DATE(date) = '{{{msg.payload.day}}}' AND shift = '{{{msg.payload.active_shift}}}' AND shifthour = {{{msg.payload.active_shift_hour}}};\n",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 490,
-        "y": 160,
+        "x": 530,
+        "y": 280,
         "wires": [
             [
                 "d4f9970e9026b2ec",
@@ -2885,8 +3686,8 @@
         "id": "35465b3555d4ec49",
         "type": "function",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
-        "name": "function 9",
+        "g": "9a4eb149e6945c58",
+        "name": "query database",
         "func": "msg.payload = {\n\n    active_shift : global.get('active_shift'),\n    active_shift_hour: global.get('active_shift_hour'),\n    day : global.get('current_day')\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -2894,8 +3695,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 160,
+        "x": 340,
+        "y": 280,
         "wires": [
             [
                 "c0b36442ce7578ee"
@@ -2906,7 +3707,7 @@
         "id": "2bab4b5323409036",
         "type": "function",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "Clear array on start of shift",
         "func": "let parts_array = new Array(8).fill(0);\n\nflow.set('parts_per_hour', parts_array);",
         "outputs": 1,
@@ -2922,49 +3723,14 @@
         ]
     },
     {
-        "id": "5a559594705a4e9e",
-        "type": "cronplus",
-        "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
-        "name": "",
-        "outputField": "payload",
-        "timeZone": "",
-        "storeName": "",
-        "commandResponseMsgOutput": "output1",
-        "defaultLocation": "",
-        "defaultLocationType": "default",
-        "outputs": 1,
-        "options": [
-            {
-                "name": "schedule1",
-                "topic": "topic1",
-                "payloadType": "default",
-                "payload": "",
-                "expressionType": "cron",
-                "expression": "45 5,13,21 * * * ",
-                "location": "",
-                "offset": "0",
-                "solarType": "all",
-                "solarEvents": "sunrise,sunset"
-            }
-        ],
-        "x": 140,
-        "y": 80,
-        "wires": [
-            [
-                "2bab4b5323409036"
-            ]
-        ]
-    },
-    {
         "id": "d3db2d9b1d01712b",
         "type": "ui_chart",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "",
         "group": "8a371b451df65cf1",
         "order": 2,
-        "width": 24,
+        "width": 25,
         "height": 12,
         "label": "Line End Counter: P04",
         "chartType": "bar",
@@ -2995,8 +3761,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 900,
-        "y": 160,
+        "x": 880,
+        "y": 240,
         "wires": [
             []
         ]
@@ -3005,7 +3771,7 @@
         "id": "fce2355146e94b14",
         "type": "cronplus",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "",
         "outputField": "payload",
         "timeZone": "",
@@ -3029,7 +3795,7 @@
             }
         ],
         "x": 140,
-        "y": 320,
+        "y": 580,
         "wires": [
             [
                 "75011c9dc6f0e056"
@@ -3040,8 +3806,8 @@
         "id": "75011c9dc6f0e056",
         "type": "function",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
-        "name": "function 11",
+        "g": "9a4eb149e6945c58",
+        "name": "query database",
         "func": "msg.payload = {\n    job: \"MRFS-STAMP6RR2A\",\n    shifthour : global.get('active_shift_hour'),\n    asset: \"P04\"\n\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -3049,8 +3815,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 320,
+        "x": 340,
+        "y": 580,
         "wires": [
             [
                 "6f6bdf98a994696a"
@@ -3061,7 +3827,7 @@
         "id": "6f6bdf98a994696a",
         "type": "postgresql",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "",
         "query": "Select spm, pph from pphdata where shifthour = {{{msg.payload.shifthour}}} AND job = '{{{msg.payload.job}}}';",
         "postgreSQLConfig": "6034ba1e7c15fb9e",
@@ -3069,7 +3835,7 @@
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 530,
-        "y": 320,
+        "y": 580,
         "wires": [
             [
                 "9c016da8cec6c459",
@@ -3082,9 +3848,9 @@
         "id": "af1cd095c12d8d6a",
         "type": "ui_text",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "group": "8a371b451df65cf1",
-        "order": 8,
+        "order": 7,
         "width": 4,
         "height": 1,
         "name": "",
@@ -3097,20 +3863,20 @@
         "fontSize": "24",
         "color": "#000000",
         "x": 730,
-        "y": 280,
+        "y": 540,
         "wires": []
     },
     {
         "id": "9c016da8cec6c459",
         "type": "ui_text",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "group": "8a371b451df65cf1",
-        "order": 16,
+        "order": 13,
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "Target PPH",
+        "label": "Hourly Target:",
         "format": "{{msg.payload[0].pph}}",
         "layout": "row-spread",
         "className": "",
@@ -3118,8 +3884,8 @@
         "font": "",
         "fontSize": "24",
         "color": "#000000",
-        "x": 730,
-        "y": 320,
+        "x": 740,
+        "y": 580,
         "wires": []
     },
     {
@@ -3159,7 +3925,7 @@
         "topicType": "msg",
         "className": "",
         "x": 150,
-        "y": 600,
+        "y": 1140,
         "wires": [
             [
                 "1959a500d1beab8e"
@@ -3180,7 +3946,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 560,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -3201,7 +3967,7 @@
         "topicType": "msg",
         "className": "",
         "x": 150,
-        "y": 560,
+        "y": 1100,
         "wires": [
             [
                 "cc7b752c0b6867f5"
@@ -3224,7 +3990,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1150,
+        "x": 1190,
         "y": 80,
         "wires": [
             []
@@ -3252,7 +4018,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 130,
-        "y": 700,
+        "y": 1240,
         "wires": [
             [
                 "9811c3044dfe91e1"
@@ -3271,7 +4037,7 @@
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 490,
-        "y": 700,
+        "y": 1240,
         "wires": [
             [
                 "693449d0bfe215a8"
@@ -3304,7 +4070,7 @@
         "diff": false,
         "className": "",
         "x": 910,
-        "y": 700,
+        "y": 1240,
         "wires": []
     },
     {
@@ -3323,7 +4089,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1140,
+        "x": 1180,
         "y": 140,
         "wires": [
             []
@@ -3335,8 +4101,8 @@
         "z": "67e87d017f864a87",
         "g": "e29d8b1528191a41",
         "group": "8a371b451df65cf1",
-        "name": "Ahead and Behind styling",
-        "order": 32,
+        "name": "Overview styling",
+        "order": 47,
         "width": 1,
         "height": 1,
         "format": "<style>\n    .nr-dashboard-cardpanel {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    .nr-dashboard-template {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    #Conveyor_Status_Scrap_Monitoring {\n\n        border: none !important;\n        /* Change the border color and width as needed */\n\n    }\n\n\n\n    md-sidenav {\n        background-color: #f1f1f1 !important;\n    }\n\n    .tot_saved {\n        border: 4px solid rgb(18, 50, 97);\n    }\n\n    .nr-menu-item-active {\n        background-color: #e6e6e6 !important;\n    }\n\n\n\n    .nr-dashboard-ui_table .tabulator {\n        font-size: 24px !important;\n        // border: 2px solid black; \n\n    }\n\n    .tabulator-header {\n        // display: none !important;\n    }\n\n    #Tab_Overview {\n        background-color: rgb(255, 255, 255);\n    }\n\n    md-content {\n        background-color: rgb(255, 255, 255) !important;\n    }\n</style>\n\n\n\n\n<script>\n    //$('#toolbar').css(\"background-color\", \"green\")\nvar toolbar = $('.md-toolbar');\n(function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n\n    if (payload === true) {\n    document.getElementByClassName(\"tabulator-header\").style.display = \"none\";\n} \n\n});\n})(scope);\n</script>",
@@ -3345,7 +4111,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1170,
+        "x": 1180,
         "y": 200,
         "wires": [
             []
@@ -3365,7 +4131,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 700,
+        "y": 1240,
         "wires": [
             [
                 "2e613b36d4d8029a"
@@ -3386,7 +4152,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 600,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -3402,7 +4168,7 @@
         ],
         "uncaught": false,
         "x": 490,
-        "y": 540,
+        "y": 1080,
         "wires": [
             [
                 "8d0809ce5204526e"
@@ -3423,7 +4189,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 540,
+        "y": 1080,
         "wires": [
             [
                 "00b7efc3ecb134ca"
@@ -3438,7 +4204,7 @@
         "position": "dialog",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 1,
         "ok": "OK",
         "cancel": "",
@@ -3447,7 +4213,7 @@
         "topic": "",
         "name": "",
         "x": 870,
-        "y": 540,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -3458,7 +4224,7 @@
         "z": "67e87d017f864a87",
         "g": "b54675af84b91a1a",
         "name": "function 15",
-        "func": "msg.payload = {\n    eff : msg.payload[0].avg_eff.toFixed(1), \n    gsph : msg.payload[0].gsph.toFixed(0), \n    totaldowntime : msg.payload[0].totaldowntime,\n    micro_dt : msg.payload[0].micro, \n    prod_dt : msg.payload[0].prod, \n    tool_dt : msg.payload[0].tool, \n    maint_dt : msg.payload[0].main,\n    selected_day : flow.get('selected_day'),\n    selected_shift : flow.get('selected_shift')\n}\n\nif (msg.payload.selected_shift == \"D\")\n{\n    msg.payload.selected_shift = \"Day\";\n}\nelse if (msg.payload.selected_shift == \"A\")\n{\n    msg.payload.selected_shift = \"Afternoon\";\n}\nelse if (msg.payload.selected_shift == \"N\")\n{\n    msg.payload.selected_shift = \"Midnight\";\n}\n\n\nreturn msg;",
+        "func": "msg.payload = {\n    eff : msg.payload[0].avg_eff.toFixed(1), \n    gsph : msg.payload[0].gsph.toFixed(0), \n    totaldowntime :  `${msg.payload[0].totaldowntime.hours} hours ${msg.payload[0].totaldowntime.minutes} minutes ${msg.payload[0].totaldowntime.seconds} seconds`,\n    micro_dt : msg.payload[0].micro, \n    prod_dt : msg.payload[0].prod, \n    tool_dt : msg.payload[0].tool, \n    maint_dt : msg.payload[0].main,\n    selected_day : flow.get('selected_day'),\n    selected_shift : flow.get('selected_shift')\n}\nif (msg.payload.selected_shift == \"D\")\n{\n    msg.payload.selected_shift = \"Day\";\n}\nelse if (msg.payload.selected_shift == \"A\")\n{\n    msg.payload.selected_shift = \"Afternoon\";\n}\nelse if (msg.payload.selected_shift == \"N\")\n{\n    msg.payload.selected_shift = \"Midnight\";\n}\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3466,7 +4232,7 @@
         "finalize": "",
         "libs": [],
         "x": 670,
-        "y": 700,
+        "y": 1240,
         "wires": [
             [
                 "08ef1e7a09cfaf54",
@@ -3503,7 +4269,7 @@
         "diff": false,
         "className": "",
         "x": 900,
-        "y": 740,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3525,20 +4291,20 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 910,
-        "y": 780,
+        "y": 1320,
         "wires": []
     },
     {
         "id": "2b0dc2259143e55a",
         "type": "link in",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "(UI) SPM in",
         "links": [
             "fbf4eab53461feab"
         ],
-        "x": 135,
-        "y": 400,
+        "x": 535,
+        "y": 500,
         "wires": [
             [
                 "0d919442da3e9760"
@@ -3549,9 +4315,9 @@
         "id": "0d919442da3e9760",
         "type": "ui_text",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "group": "8a371b451df65cf1",
-        "order": 11,
+        "order": 9,
         "width": 4,
         "height": 1,
         "name": "",
@@ -3563,25 +4329,25 @@
         "font": "",
         "fontSize": "24",
         "color": "#000000",
-        "x": 330,
-        "y": 400,
+        "x": 730,
+        "y": 500,
         "wires": []
     },
     {
         "id": "597298a71a666f30",
         "type": "function",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
-        "name": "function 16",
-        "func": "let strokes = Number(msg.payload[0].count);\nlet date = new Date;\nlet mins = date.getMinutes();\nlet elapsed_time = 0;\nif ( mins >=45 && mins <=59){\n\n     elapsed_time = mins -45;\n}\nelse if( mins >=0 && mins <=44){\n    elapsed_time = mins + 15;\n\n}\n\n\nlet eff = 100*(strokes/((elapsed_time/60)*flow.get('target_pph')));\n\nmsg.payload = eff.toFixed(2);\nreturn msg;\n",
+        "g": "9a4eb149e6945c58",
+        "name": "Display eff",
+        "func": "let strokes = Number(msg.payload[0].count);\nlet date = new Date;\nlet mins = date.getMinutes();\nlet elapsed_time_mins = 0;\nlet elapsed_time_secs = 0;\nlet total_elapsed_time = 0;\nif ( mins >=45 && mins <=59){\n    if (mins == 45){\n        elapsed_time_secs = date.getSeconds();\n        \n    }else {\n        \n        elapsed_time_mins = mins -45;\n        elapsed_time_secs = date.getSeconds();\n\n\n    }\n\n}\nelse if( mins >=0 && mins <=44){\n    elapsed_time_mins = mins + 15;\n    elapsed_time_secs = date.getSeconds();\n\n}\n\ntotal_elapsed_time = elapsed_time_mins + elapsed_time_secs/60;\n\nlet eff = 100*(strokes/((total_elapsed_time/60)*flow.get('target_pph')));\n\nmsg.payload = eff.toFixed(0);\nmsg.topic = global.get('active_shift_hour');\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 200,
+        "x": 690,
+        "y": 300,
         "wires": [
             [
                 "ab218c7f73cd9808"
@@ -3628,7 +4394,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1100,
-        "y": 620,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -3637,7 +4403,7 @@
         "id": "0c7fd349363fdd79",
         "type": "change",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
+        "g": "9a4eb149e6945c58",
         "name": "",
         "rules": [
             {
@@ -3654,7 +4420,7 @@
         "to": "",
         "reg": false,
         "x": 750,
-        "y": 360,
+        "y": 620,
         "wires": [
             []
         ]
@@ -3663,14 +4429,14 @@
         "id": "ab218c7f73cd9808",
         "type": "ui_gauge",
         "z": "67e87d017f864a87",
-        "g": "8ccc6e9e9f09cd11",
-        "name": "",
+        "g": "9a4eb149e6945c58",
+        "name": "Hourly efficiency",
         "group": "8a371b451df65cf1",
-        "order": 21,
+        "order": 17,
         "width": 4,
         "height": 3,
         "gtype": "donut",
-        "title": "Hour Efficiency",
+        "title": "Hour {{msg.topic}} Efficiency",
         "label": "%",
         "format": "{{msg.payload}}",
         "min": 0,
@@ -3685,7 +4451,7 @@
         "diff": false,
         "className": "",
         "x": 900,
-        "y": 200,
+        "y": 320,
         "wires": []
     },
     {
@@ -3702,7 +4468,7 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 620,
+        "y": 1160,
         "wires": [
             [
                 "3106164f32a72bff"
@@ -3716,19 +4482,19 @@
         "g": "b54675af84b91a1a",
         "group": "a779266e210b2994",
         "order": 38,
-        "width": 6,
+        "width": 8,
         "height": 1,
         "name": "",
-        "label": "Overall Downtime",
+        "label": "Overall Downtime:",
         "format": "{{msg.payload.totaldowntime}}",
-        "layout": "row-spread",
+        "layout": "row-left",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
         "x": 910,
-        "y": 660,
+        "y": 1200,
         "wires": []
     },
     {
@@ -3738,19 +4504,837 @@
         "g": "e29d8b1528191a41",
         "group": "2e55cdce086fb22b",
         "name": "Downtime styling",
-        "order": 16,
+        "order": 20,
         "width": 1,
         "height": 1,
-        "format": "<style>\n    .nr-dashboard-cardpanel {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    .nr-dashboard-template {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    #Conveyor_Status_Scrap_Monitoring {\n\n        border: none !important;\n        /* Change the border color and width as needed */\n\n    }\n\n\n\n    md-sidenav {\n        background-color: #f1f1f1 !important;\n    }\n\n    .tot_saved {\n        border: 4px solid rgb(18, 50, 97);\n    }\n\n    .nr-menu-item-active {\n        background-color: #e6e6e6 !important;\n    }\n\n\n\n    .nr-dashboard-ui_table .tabulator {\n        font-size: 24px !important;\n        // border: 2px solid black; \n\n    }\n\n    .tabulator-header {\n        // display: none !important;\n    }\n\n    #Tab_Overview {\n        background-color: rgb(255, 255, 255);\n    }\n\n    md-content {\n        background-color: rgb(255, 255, 255) !important;\n    }\n</style>\n\n\n\n\n<script>\n    //$('#toolbar').css(\"background-color\", \"green\")\nvar toolbar = $('.md-toolbar');\n(function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n\n    if (payload === true) {\n    document.getElementByClassName(\"tabulator-header\").style.display = \"none\";\n} \n\n});\n})(scope);\n</script>",
+        "format": "<style>\n    .nr-dashboard-cardpanel {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    .nr-dashboard-template {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    #Conveyor_Status_Scrap_Monitoring {\n\n        border: none !important;\n        /* Change the border color and width as needed */\n\n    }\n\n\n\n    md-sidenav {\n        background-color: #f1f1f1 !important;\n    }\n\n    .tot_saved {\n        border: 4px solid rgb(18, 50, 97);\n    }\n\n    .nr-menu-item-active {\n        background-color: #e6e6e6 !important;\n    }\n\n\n\n    .nr-dashboard-ui_table .tabulator {\n        font-size: 24px !important;\n        // border: 2px solid black; \n\n    }\n\n    .tabulator-header {\n        // display: none !important;\n    }\n\n    #Tab_Overview {\n        background-color: rgb(255, 255, 255);\n    }\n\n    md-content {\n        background-color: rgb(255, 255, 255) !important;\n    }\n\n    md-sidenav {\n        display: none;\n    }\n\n</style>\n\n\n\n\n<script>\n    //$('#toolbar').css(\"background-color\", \"green\")\nvar toolbar = $('.md-toolbar');\n(function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n\n    if (payload === true) {\n    document.getElementByClassName(\"tabulator-header\").style.display = \"none\";\n} \n\n});\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1150,
+        "x": 1190,
         "y": 260,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "b3871f271b1ceec0",
+        "type": "postgresql",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "",
+        "query": "SELECT pph FROM pphdata  where job = '{{{msg.payload.job}}}'\nORDER BY shifthour asc;",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 140,
+        "wires": [
+            [
+                "c07abe59fe230e51",
+                "67f9fa48404d9ef5"
+            ]
+        ]
+    },
+    {
+        "id": "3cefe9c32a0c2f9f",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "query database",
+        "func": "msg.payload = {\n    active_shift : global.get('active_shift'),\n    job: 'MRFS-STAMP6RR2A'\n\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "b3871f271b1ceec0"
+            ]
+        ]
+    },
+    {
+        "id": "5a559594705a4e9e",
+        "type": "cronplus",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "",
+        "outputField": "payload",
+        "timeZone": "",
+        "storeName": "",
+        "commandResponseMsgOutput": "output1",
+        "defaultLocation": "",
+        "defaultLocationType": "default",
+        "outputs": 1,
+        "options": [
+            {
+                "name": "schedule1",
+                "topic": "topic1",
+                "payloadType": "default",
+                "payload": "",
+                "expressionType": "cron",
+                "expression": "45 5,13,21 * * * ",
+                "location": "",
+                "offset": "0",
+                "solarType": "all",
+                "solarEvents": "sunrise,sunset"
+            }
+        ],
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "2bab4b5323409036"
+            ]
+        ]
+    },
+    {
+        "id": "7535129e7d4b8459",
+        "type": "link in",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "(UI) active shift in",
+        "links": [
+            "408092bbaad8ae97"
+        ],
+        "x": 75,
+        "y": 140,
+        "wires": [
+            [
+                "3cefe9c32a0c2f9f"
+            ]
+        ]
+    },
+    {
+        "id": "c07abe59fe230e51",
+        "type": "change",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pph_targets_arr",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24757dfa2d1d3795",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 27,
+        "width": 2,
+        "height": 1,
+        "name": "hour2",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_2_color}} >{{msg.payload.hour_2}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "36bfdef17c9df756",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 29,
+        "width": 2,
+        "height": 1,
+        "name": "hour3",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_3_color}} >{{msg.payload.hour_3}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f3afe77d563ce6cd",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 31,
+        "width": 2,
+        "height": 1,
+        "name": "hour4",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_4_color}} >{{msg.payload.hour_4}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "db76743f89aa1b0b",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 33,
+        "width": 2,
+        "height": 1,
+        "name": "hour5",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_5_color}} >{{msg.payload.hour_5}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "fb4ef688251b6e82",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 35,
+        "width": 2,
+        "height": 1,
+        "name": "hour6",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_6_color}} >{{msg.payload.hour_6}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "e5f22be3c6f61e68",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 37,
+        "width": 2,
+        "height": 1,
+        "name": "hour7",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_7_color}} >{{msg.payload.hour_7}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "934f5b099ced1492",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 39,
+        "width": 2,
+        "height": 1,
+        "name": "hour8",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_8_color}} >{{msg.payload.hour_8}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "9cf38fbcdf08ec14",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 25,
+        "width": 2,
+        "height": 1,
+        "name": "hour1",
+        "label": "DELTA:",
+        "format": "<font color = {{msg.payload.hour_1_color}} >{{msg.payload.hour_1}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "0507e7d8b09f9606",
+        "type": "link out",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "(UI) Delta pph out",
+        "mode": "link",
+        "links": [
+            "045bde20f198f95f"
+        ],
+        "x": 815,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "045bde20f198f95f",
+        "type": "link in",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "UI Delta pph in",
+        "links": [
+            "0507e7d8b09f9606"
+        ],
+        "x": 145,
+        "y": 800,
+        "wires": [
+            [
+                "24757dfa2d1d3795",
+                "36bfdef17c9df756",
+                "f3afe77d563ce6cd",
+                "db76743f89aa1b0b",
+                "fb4ef688251b6e82",
+                "e5f22be3c6f61e68",
+                "934f5b099ced1492",
+                "9cf38fbcdf08ec14"
+            ]
+        ]
+    },
+    {
+        "id": "5567f438c47ed9b7",
+        "type": "comment",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "Displays delta parts per hour",
+        "info": "",
+        "x": 180,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bd216c87564d5dd4",
+        "type": "inject",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 540,
+        "wires": [
+            [
+                "75011c9dc6f0e056"
+            ]
+        ]
+    },
+    {
+        "id": "53646c28a6934de5",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "Display shift target and actual",
+        "func": "\n\nlet total_parts = flow.get('parts_per_hour');\nlet target_pph = flow.get('pph_targets_arr')\n\nlet sum_actual= total_parts.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n\nlet sum_target = flow.get('production_to_target');\n\nmsg.payload = {\n    actual: sum_actual,\n    target: sum_target\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "6a7a89e59a22a278",
+                "fc563a5b3c55e507"
+            ]
+        ]
+    },
+    {
+        "id": "825d3263d7bc18bc",
+        "type": "complete",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "",
+        "scope": [
+            "d4f9970e9026b2ec"
+        ],
+        "uncaught": false,
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "53646c28a6934de5"
+            ]
+        ]
+    },
+    {
+        "id": "67f9fa48404d9ef5",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "name": "set target production",
+        "func": "let sum =0;\nfor (let i =0; i< msg.payload.length; i++){\n\n    sum+= msg.payload[i].pph\n}\n\nflow.set('production_to_target', sum);\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc563a5b3c55e507",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 42,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Production to Target:",
+        "format": "{{msg.payload.target}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "22",
+        "color": "#000000",
+        "x": 680,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "6a7a89e59a22a278",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "9a4eb149e6945c58",
+        "group": "8a371b451df65cf1",
+        "order": 45,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Current Shift Production",
+        "format": "{{msg.payload.actual}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "22",
+        "color": "#000000",
+        "x": 690,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a645d83276ef403c",
+        "type": "ui_date_picker",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "Start day",
+        "label": "Start",
+        "group": "eec6e08df453ddc6",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 120,
+        "y": 1460,
+        "wires": [
+            [
+                "4e2839d2925523a4"
+            ]
+        ]
+    },
+    {
+        "id": "499d39d436bde848",
+        "type": "ui_dropdown",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "Shift",
+        "label": "Shift",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "eec6e08df453ddc6",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Midnight",
+                "value": "N",
+                "type": "str"
+            },
+            {
+                "label": "Day",
+                "value": "D",
+                "type": "str"
+            },
+            {
+                "label": "Afternoon",
+                "value": "A",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 110,
+        "y": 1580,
+        "wires": [
+            [
+                "d7df78bc39502bd3"
+            ]
+        ]
+    },
+    {
+        "id": "98792b2462a49132",
+        "type": "ui_date_picker",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "End day",
+        "label": "End",
+        "group": "eec6e08df453ddc6",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 120,
+        "y": 1520,
+        "wires": [
+            [
+                "06d0f1f9d4134348"
+            ]
+        ]
+    },
+    {
+        "id": "4e2839d2925523a4",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "set start date",
+        "func": "let date = new Date(msg.payload); \nmsg.payload = date.toLocaleDateString();\n\nflow.set('startdate', msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06d0f1f9d4134348",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "set end date",
+        "func": "let date = new Date(msg.payload); \nmsg.payload = date.toLocaleDateString();\n\nflow.set('enddate', msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d7df78bc39502bd3",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "select shift",
+        "func": "flow.set('shift_to_avg', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5ac5e7530113c2b",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "Query database",
+        "func": "msg.payload = {\n    startdate: flow.get('startdate'),\n    enddate: flow.get('enddate'),\n    shift: flow.get('shift_to_avg')\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 1660,
+        "wires": [
+            [
+                "21e8e926f176a83d"
+            ]
+        ]
+    },
+    {
+        "id": "6a7d7848080926cd",
+        "type": "ui_button",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "",
+        "group": "eec6e08df453ddc6",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "View Report",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 1660,
+        "wires": [
+            [
+                "c5ac5e7530113c2b"
+            ]
+        ]
+    },
+    {
+        "id": "2ac3e628fbeeb526",
+        "type": "ui_template",
+        "z": "67e87d017f864a87",
+        "g": "e29d8b1528191a41",
+        "group": "eec6e08df453ddc6",
+        "name": "Average KPI styling",
+        "order": 9,
+        "width": 1,
+        "height": 1,
+        "format": "<style>\n    .nr-dashboard-cardpanel {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    .nr-dashboard-template {\n        padding: 0 !important;\n        margin: 0 !important;\n    }\n\n    #Conveyor_Status_Scrap_Monitoring {\n\n        border: none !important;\n        /* Change the border color and width as needed */\n\n    }\n\n\n\n    md-sidenav {\n        background-color: #f1f1f1 !important;\n    }\n\n    .tot_saved {\n        border: 4px solid rgb(18, 50, 97);\n    }\n\n    .nr-menu-item-active {\n        background-color: #e6e6e6 !important;\n    }\n\n\n\n    .nr-dashboard-ui_table .tabulator {\n        font-size: 24px !important;\n        // border: 2px solid black; \n\n    }\n\n    .tabulator-header {\n        // display: none !important;\n    }\n\n    #Tab_Overview {\n        background-color: rgb(255, 255, 255);\n    }\n\n    md-content {\n        background-color: rgb(255, 255, 255) !important;\n    }\n\n    md-sidenav {\n        display: none;\n    }\n\n</style>\n\n\n\n\n<script>\n    //$('#toolbar').css(\"background-color\", \"green\")\nvar toolbar = $('.md-toolbar');\n(function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n\n    if (payload === true) {\n    document.getElementByClassName(\"tabulator-header\").style.display = \"none\";\n} \n\n});\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1190,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "21e8e926f176a83d",
+        "type": "postgresql",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "",
+        "query": "SELECT * FROM shiftdata\n where day between '{{{msg.payload.startdate}}}' AND '{{{msg.payload.enddate}}}' AND \nshift = '{{{msg.payload.shift}}}';",
+        "postgreSQLConfig": "6034ba1e7c15fb9e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 510,
+        "y": 1660,
+        "wires": [
+            [
+                "f0c0d010fe159800"
+            ]
+        ]
+    },
+    {
+        "id": "f0c0d010fe159800",
+        "type": "function",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "Calculate averages",
+        "func": "let eff_arr = calAvgEff(msg.payload);\nlet avg_eff = eff_arr[0].toFixed(1);\nlet avg_gsph = eff_arr[1].toFixed(1);\n\n\n\nlet totaldowntime = eff_arr[2];\n\nlet hours = Math.floor(totaldowntime / 3600);\ntotaldowntime %= 3600;\nlet minutes = Math.floor(totaldowntime / 60);\nlet seconds = totaldowntime % 60;\n\ntotaldowntime = `${hours} hours ${minutes} minutes ${seconds} seconds `;\n\n\n\nmsg.payload = {\n    eff : avg_eff, \n    gsph : avg_gsph, \n    totaldowntime : totaldowntime,\n    startdate: flow.get('startdate'),\n    enddate: flow.get('enddate'),\n    shift: flow.get('shift_to_avg')\n}\nreturn msg;\n\n\n\n\n\nfunction calAvgEff(arr){\n    let sum_eff =0;\n    let sum_gsph = 0;\n    let len = arr.length;\n    let object_keys = [];\n    let totaldowntime = 0;\n    for (let i =0 ; i < len; i++ ){\n\n        sum_eff += arr[i].avg_eff;\n        sum_gsph += arr[i].gsph;\n         object_keys = Object.keys(arr[i].totaldowntime);\n        totaldowntime += calcDowntime(object_keys, arr[i].totaldowntime )\n\n    }\n\n    let avg_eff = sum_eff/len;\n\n    let avg_gsph = sum_gsph/len;\n    return [avg_eff, avg_gsph,totaldowntime];\n\n\n\n\n}\n\n\n\nfunction calcDowntime(keys, time_object){\n\n    let hours = 0;\n    let mins = 0;\n    let secs = 0; \n    if(keys.includes(\"hours\")){\n        hours = time_object.hours;\n\n    }else hours = 0;\n    if(keys.includes(\"minutes\")){\n        mins = time_object.minutes;\n    }else mins = 0;\n    if (keys.includes(\"seconds\")){\n        secs = time_object.seconds ;\n\n    }else secs = 0;\n\n    let totaldowntime = 60*60*hours + 60* mins +secs;\n\n    return totaldowntime;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1660,
+        "wires": [
+            [
+                "ad148c89324e3997",
+                "5dddca9cfe03c7eb",
+                "b0d4805bf8d1239b"
+            ]
+        ]
+    },
+    {
+        "id": "ad148c89324e3997",
+        "type": "ui_gauge",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "",
+        "group": "eec6e08df453ddc6",
+        "order": 15,
+        "width": 6,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Overall Efficiency",
+        "label": "%",
+        "format": "{{msg.payload.eff}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#d52607",
+            "#e6e600",
+            "#11d30d"
+        ],
+        "seg1": "50",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "5dddca9cfe03c7eb",
+        "type": "ui_gauge",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "name": "",
+        "group": "eec6e08df453ddc6",
+        "order": 17,
+        "width": 6,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Overall GSPH",
+        "label": "strokes",
+        "format": "{{msg.payload.gsph}}",
+        "min": 0,
+        "max": "1500",
+        "colors": [
+            "#d52607",
+            "#e6e600",
+            "#11d30d"
+        ],
+        "seg1": "750",
+        "seg2": "1125",
+        "diff": false,
+        "className": "",
+        "x": 940,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "b0d4805bf8d1239b",
+        "type": "ui_text",
+        "z": "67e87d017f864a87",
+        "g": "8684a2f4943c48c6",
+        "group": "eec6e08df453ddc6",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Date range:",
+        "format": "{{msg.payload.startdate}} to  {{msg.payload.enddate}}, Shift: {{msg.payload.shift}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 1700,
+        "wires": []
     }
 ]
