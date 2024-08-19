@@ -2,7 +2,13 @@
     "name": "aheadBehind",
     "description": "A Node-Red project for the Press Shop Ahead and Behind",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-controltimer": "0.4.1",
+        "node-red-dashboard": "3.6.5",
+        "node-red-node-email": "3.0.0",
+        "node-red-contrib-postgresql": "0.14.0",
+        "node-red-contrib-cron-plus": "2.1.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
